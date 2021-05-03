@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		20B5F84B263FEA8800B3DA3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B5F84A263FEA8800B3DA3D /* AppDelegate.swift */; };
-		20B5F84D263FEA8800B3DA3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B5F84C263FEA8800B3DA3D /* SceneDelegate.swift */; };
 		20B5F84F263FEA8800B3DA3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B5F84E263FEA8800B3DA3D /* ViewController.swift */; };
 		20B5F852263FEA8800B3DA3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B5F850263FEA8800B3DA3D /* Main.storyboard */; };
 		20B5F854263FEA8B00B3DA3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20B5F853263FEA8B00B3DA3D /* Assets.xcassets */; };
@@ -20,7 +19,6 @@
 /* Begin PBXFileReference section */
 		20B5F847263FEA8800B3DA3D /* Instagrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagrid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20B5F84A263FEA8800B3DA3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		20B5F84C263FEA8800B3DA3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		20B5F84E263FEA8800B3DA3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		20B5F851263FEA8800B3DA3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		20B5F853263FEA8B00B3DA3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				20B5F862263FF2F800B3DA3D /* ThirstySoftRegular.otf */,
-				20B5F84C263FEA8800B3DA3D /* SceneDelegate.swift */,
 				20B5F84A263FEA8800B3DA3D /* AppDelegate.swift */,
 				20B5F858263FEA8B00B3DA3D /* Info.plist */,
 				20B5F855263FEA8B00B3DA3D /* LaunchScreen.storyboard */,
@@ -179,7 +176,6 @@
 			files = (
 				20B5F84F263FEA8800B3DA3D /* ViewController.swift in Sources */,
 				20B5F84B263FEA8800B3DA3D /* AppDelegate.swift in Sources */,
-				20B5F84D263FEA8800B3DA3D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,7 +323,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Instagrid/Info.plist;
+				INFOPLIST_FILE = "Instagrid/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -346,7 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Instagrid/Info.plist;
+				INFOPLIST_FILE = "Instagrid/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
