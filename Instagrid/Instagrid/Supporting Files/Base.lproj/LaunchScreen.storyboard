@@ -16,22 +16,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="j26-t6-uKF">
-                                <rect key="frame" x="119" y="142" width="177" height="197"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="j26-t6-uKF">
+                                <rect key="frame" x="108.66666666666669" y="140" width="197" height="197"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="j26-t6-uKF" secondAttribute="height" multiplier="1:1" id="NGu-It-152"/>
+                                    <constraint firstAttribute="width" constant="197" id="QNH-zg-DFy"/>
+                                </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Instagrid" translatesAutoresizingMaskIntoConstraints="NO" id="Odl-0c-H4a">
-                                <rect key="frame" x="76" y="347" width="263" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Instagrid" translatesAutoresizingMaskIntoConstraints="NO" id="Odl-0c-H4a">
+                                <rect key="frame" x="77" y="347" width="260" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="dFQ-DD-EQR"/>
+                                    <constraint firstAttribute="width" constant="260" id="t1g-Z0-kl0"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.71982049940000004" green="0.84202820060000005" blue="0.89804977180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="j26-t6-uKF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="9H7-Ob-jpA"/>
+                            <constraint firstItem="Odl-0c-H4a" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="mwY-av-imK"/>
+                            <constraint firstItem="j26-t6-uKF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="ncc-U4-XAt"/>
+                            <constraint firstItem="Odl-0c-H4a" firstAttribute="top" secondItem="j26-t6-uKF" secondAttribute="bottom" constant="10" id="wOh-JR-JRd"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="374.18478260869568"/>
+            <point key="canvasLocation" x="-65.217391304347828" y="372.554347826087"/>
         </scene>
     </scenes>
     <resources>
