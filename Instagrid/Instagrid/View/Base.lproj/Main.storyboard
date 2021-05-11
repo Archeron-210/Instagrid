@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="landscape" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -19,11 +19,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fw7-Xd-hmk">
-                                <rect key="frame" x="268.5" y="20" width="130" height="34"/>
+                                <rect key="frame" x="122.5" y="40" width="130" height="45.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="Y83-8G-S1Q"/>
                                     <constraint firstAttribute="height" constant="34" id="qPE-Or-KfE"/>
@@ -45,20 +45,20 @@
                                 </variation>
                             </label>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1u-mX-0dZ" userLabel="Layout2">
-                                <rect key="frame" x="193" y="74" width="281" height="281"/>
+                                <rect key="frame" x="40" y="186" width="295" height="295"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQh-z5-kMr">
-                                        <rect key="frame" x="15" y="148" width="251" height="118"/>
+                                        <rect key="frame" x="15" y="155" width="265" height="125"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="YFb-ht-5No">
-                                                <rect key="frame" x="110.5" y="44" width="30" height="30"/>
+                                                <rect key="frame" x="117.5" y="47.5" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="9AX-ui-lb9"/>
                                                     <constraint firstAttribute="width" constant="30" id="U4z-sW-aUV"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NS-z2-bDj">
-                                                <rect key="frame" x="0.0" y="0.0" width="251" height="118"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="265" height="125"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -72,17 +72,17 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vu0-ei-p5G">
-                                        <rect key="frame" x="148" y="15" width="118" height="118"/>
+                                        <rect key="frame" x="155" y="15" width="125" height="125"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="vPg-Yr-8OM">
-                                                <rect key="frame" x="44" y="44" width="30" height="30"/>
+                                                <rect key="frame" x="47.5" y="47.5" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Vit-4W-STj"/>
                                                     <constraint firstAttribute="width" constant="30" id="weo-vw-JY7"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kom-7n-sKN">
-                                                <rect key="frame" x="0.0" y="0.0" width="118" height="118"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -97,17 +97,17 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bsG-sw-9cf">
-                                        <rect key="frame" x="15" y="15" width="118" height="118"/>
+                                        <rect key="frame" x="15" y="15" width="125" height="125"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="mEe-vV-14l">
-                                                <rect key="frame" x="44" y="44" width="30" height="30"/>
+                                                <rect key="frame" x="47.5" y="47.5" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="KTh-Va-EED"/>
                                                     <constraint firstAttribute="height" constant="30" id="uii-OK-7sz"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2E-Wd-jpM">
-                                                <rect key="frame" x="0.0" y="0.0" width="118" height="118"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -139,20 +139,20 @@
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FLP-Vn-I2c" userLabel="Layout3">
-                                <rect key="frame" x="193" y="74" width="281" height="281"/>
+                                <rect key="frame" x="40" y="186" width="295" height="295"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="75k-DO-0zA">
-                                        <rect key="frame" x="15" y="15" width="118" height="118"/>
+                                        <rect key="frame" x="15" y="15" width="125" height="125"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="g1e-bk-cRD">
-                                                <rect key="frame" x="44" y="44" width="30" height="30"/>
+                                                <rect key="frame" x="47.5" y="47.5" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="BSu-gX-Qyx"/>
                                                     <constraint firstAttribute="height" constant="30" id="fX5-ed-4Dc"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0T-uj-r3P">
-                                                <rect key="frame" x="0.0" y="0.0" width="118" height="118"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -167,17 +167,17 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yli-ad-MgM">
-                                        <rect key="frame" x="15" y="148" width="118" height="118"/>
+                                        <rect key="frame" x="15" y="155" width="125" height="125"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="f3Y-P2-85D">
-                                                <rect key="frame" x="44" y="44" width="30" height="30"/>
+                                                <rect key="frame" x="47.5" y="47.5" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="0Xz-66-vdw"/>
                                                     <constraint firstAttribute="width" constant="30" id="pPz-Vm-XWl"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvc-WG-Xoy">
-                                                <rect key="frame" x="0.0" y="0.0" width="118" height="118"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -192,17 +192,17 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Jg-MD-K3v">
-                                        <rect key="frame" x="148" y="148" width="118" height="118"/>
+                                        <rect key="frame" x="155" y="155" width="125" height="125"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="mTk-yy-5YV">
-                                                <rect key="frame" x="44" y="44" width="30" height="30"/>
+                                                <rect key="frame" x="47.5" y="47.5" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="8vZ-pl-0ao"/>
                                                     <constraint firstAttribute="width" constant="30" id="eSW-OW-MUa"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcz-RS-z9d">
-                                                <rect key="frame" x="0.0" y="0.0" width="118" height="118"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -217,17 +217,17 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EDg-7u-e3L">
-                                        <rect key="frame" x="148" y="15" width="118" height="118"/>
+                                        <rect key="frame" x="155" y="15" width="125" height="125"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="X06-zv-8bM">
-                                                <rect key="frame" x="44" y="44" width="30" height="30"/>
+                                                <rect key="frame" x="47.5" y="47.5" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="kgS-Px-9fM"/>
                                                     <constraint firstAttribute="height" constant="30" id="skC-we-CD0"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srt-Wp-7rE">
-                                                <rect key="frame" x="0.0" y="0.0" width="118" height="118"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -263,20 +263,20 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FNI-Fc-XGb" userLabel="Layout1">
-                                <rect key="frame" x="193" y="74" width="281" height="281"/>
+                                <rect key="frame" x="40" y="186" width="295" height="295"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="plH-lg-tRb">
-                                        <rect key="frame" x="15" y="15" width="251" height="118"/>
+                                        <rect key="frame" x="15" y="15" width="265" height="125"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="eb3-dO-YXd">
-                                                <rect key="frame" x="110.5" y="44" width="30" height="30"/>
+                                                <rect key="frame" x="117.5" y="47.5" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="Mgl-nF-ykn"/>
                                                     <constraint firstAttribute="height" constant="30" id="Mj3-7a-fSg"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYk-Je-c3V">
-                                                <rect key="frame" x="0.0" y="0.0" width="251" height="118"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="265" height="125"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -290,17 +290,17 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q9s-wl-jYc">
-                                        <rect key="frame" x="15" y="148" width="118" height="118"/>
+                                        <rect key="frame" x="15" y="155" width="125" height="125"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="UEz-tR-Azu">
-                                                <rect key="frame" x="44" y="44" width="30" height="30"/>
+                                                <rect key="frame" x="47.5" y="47.5" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="5cm-Sg-cVY"/>
                                                     <constraint firstAttribute="width" constant="30" id="vzJ-qo-oxD"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AO-7N-wK0">
-                                                <rect key="frame" x="0.0" y="0.0" width="118" height="118"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -315,17 +315,17 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DaA-nA-Kfk">
-                                        <rect key="frame" x="148" y="148" width="118" height="118"/>
+                                        <rect key="frame" x="155" y="155" width="125" height="125"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Plus" translatesAutoresizingMaskIntoConstraints="NO" id="AID-O8-Aq3">
-                                                <rect key="frame" x="44" y="44" width="30" height="30"/>
+                                                <rect key="frame" x="47.5" y="47.5" width="30" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="4mU-cu-MCU"/>
                                                     <constraint firstAttribute="width" constant="30" id="GPt-gB-mHA"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uF-nJ-f4D">
-                                                <rect key="frame" x="0.0" y="0.0" width="118" height="118"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -357,24 +357,24 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Left" translatesAutoresizingMaskIntoConstraints="NO" id="1gN-d5-THy">
-                                <rect key="frame" x="83.5" y="145" width="20" height="20"/>
+                                <rect key="frame" x="177.5" y="121" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1gN-d5-THy" secondAttribute="height" multiplier="1:1" id="ku5-G3-zAa"/>
                                     <constraint firstAttribute="width" constant="20" id="wJi-Gb-wa6"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="rWs-gf-e7n">
-                                <rect key="frame" x="542" y="74" width="75" height="281"/>
+                                <rect key="frame" x="50" y="554" width="275" height="73"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i6H-IA-ao6">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ww-1v-ni7">
-                                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
                                                 <state key="normal" backgroundImage="Layout 1"/>
                                             </button>
                                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="vvs-XF-22S">
-                                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -391,14 +391,14 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CxR-ci-7nd">
-                                        <rect key="frame" x="0.0" y="103" width="75" height="75"/>
+                                        <rect key="frame" x="101" y="0.0" width="73" height="73"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ck8-xK-S9j">
-                                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
                                                 <state key="normal" backgroundImage="Layout 2"/>
                                             </button>
                                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="eIU-tL-3aj">
-                                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -415,14 +415,14 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcV-T1-HqR">
-                                        <rect key="frame" x="0.0" y="206" width="75" height="75"/>
+                                        <rect key="frame" x="202" y="0.0" width="73" height="73"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ri-Lf-lDL">
-                                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
                                                 <state key="normal" backgroundImage="Layout 3"/>
                                             </button>
                                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="OLa-L4-Rj0">
-                                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -441,8 +441,8 @@
                                 </subviews>
                                 <variation key="heightClass=regular-widthClass=compact" axis="horizontal"/>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJB-P7-g8c">
-                                <rect key="frame" x="8" y="173" width="171" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe left to share" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJB-P7-g8c">
+                                <rect key="frame" x="102" y="149" width="171" height="29"/>
                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="26"/>
                                 <color key="textColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
@@ -511,8 +511,6 @@
                                 <exclude reference="HRa-nn-9eU"/>
                                 <exclude reference="kXs-WT-xML"/>
                                 <exclude reference="p4x-E6-lRP"/>
-                                <exclude reference="pXb-4j-lxI"/>
-                                <exclude reference="pru-ec-Z5F"/>
                                 <exclude reference="GIG-fC-m78"/>
                                 <exclude reference="P8Q-Ph-nJW"/>
                                 <exclude reference="v8D-sF-iNf"/>
@@ -529,6 +527,8 @@
                                 <exclude reference="Zfe-aO-R1g"/>
                                 <exclude reference="qPa-dX-tZJ"/>
                                 <exclude reference="wrw-EP-juF"/>
+                                <exclude reference="pXb-4j-lxI"/>
+                                <exclude reference="pru-ec-Z5F"/>
                                 <exclude reference="f99-JJ-mvI"/>
                                 <exclude reference="lIn-yn-Zdm"/>
                                 <exclude reference="rcP-7w-inh"/>
@@ -543,9 +543,6 @@
                                 <exclude reference="kXs-WT-xML"/>
                                 <exclude reference="p4x-E6-lRP"/>
                                 <exclude reference="rXV-Eg-Njg"/>
-                                <exclude reference="Qg5-hX-fPE"/>
-                                <exclude reference="pXb-4j-lxI"/>
-                                <exclude reference="pru-ec-Z5F"/>
                                 <include reference="GIG-fC-m78"/>
                                 <include reference="P8Q-Ph-nJW"/>
                                 <exclude reference="R6L-aV-7q0"/>
@@ -572,6 +569,9 @@
                                 <exclude reference="4mD-aB-AWc"/>
                                 <exclude reference="6rh-i7-pkP"/>
                                 <exclude reference="gHw-9N-APm"/>
+                                <exclude reference="Qg5-hX-fPE"/>
+                                <exclude reference="pXb-4j-lxI"/>
+                                <exclude reference="pru-ec-Z5F"/>
                                 <include reference="f99-JJ-mvI"/>
                                 <exclude reference="lIn-yn-Zdm"/>
                                 <include reference="rcP-7w-inh"/>
@@ -579,10 +579,17 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="arrowImage" destination="1gN-d5-THy" id="Qs6-oI-iDv"/>
+                        <outlet property="layoutOneButton" destination="6ww-1v-ni7" id="15O-0s-u5U"/>
+                        <outlet property="layoutThreeButton" destination="7ri-Lf-lDL" id="eRD-XX-wnL"/>
+                        <outlet property="layoutTwoButton" destination="ck8-xK-S9j" id="RIO-oI-H6I"/>
+                        <outlet property="swipeLabel" destination="eJB-P7-g8c" id="yEA-T4-o5n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="314" y="-173"/>
+            <point key="canvasLocation" x="121" y="-338"/>
         </scene>
     </scenes>
     <resources>
