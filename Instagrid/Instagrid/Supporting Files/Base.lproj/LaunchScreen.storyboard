@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -13,21 +13,19 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="j26-t6-uKF">
-                                <rect key="frame" x="108.66666666666669" y="140" width="197" height="197"/>
+                                <rect key="frame" x="100" y="140" width="175" height="175"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="j26-t6-uKF" secondAttribute="height" multiplier="1:1" id="NGu-It-152"/>
-                                    <constraint firstAttribute="width" constant="197" id="QNH-zg-DFy"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Instagrid" translatesAutoresizingMaskIntoConstraints="NO" id="Odl-0c-H4a">
-                                <rect key="frame" x="77" y="347" width="260" height="75"/>
+                                <rect key="frame" x="100" y="325" width="175" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="dFQ-DD-EQR"/>
-                                    <constraint firstAttribute="width" constant="260" id="t1g-Z0-kl0"/>
+                                    <constraint firstAttribute="height" constant="50" id="tS0-Z0-hfO"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -35,19 +33,56 @@
                         <color key="backgroundColor" red="0.71982049940000004" green="0.84202820060000005" blue="0.89804977180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="j26-t6-uKF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="9H7-Ob-jpA"/>
+                            <constraint firstItem="j26-t6-uKF" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="B5d-br-yWF"/>
+                            <constraint firstItem="Odl-0c-H4a" firstAttribute="leading" secondItem="j26-t6-uKF" secondAttribute="leading" id="K2a-xR-yI2"/>
+                            <constraint firstItem="Odl-0c-H4a" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="LEw-aw-N9m"/>
+                            <constraint firstItem="j26-t6-uKF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="ZJP-nx-XUa"/>
+                            <constraint firstItem="j26-t6-uKF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="ad6-4B-Sap"/>
+                            <constraint firstAttribute="bottom" secondItem="Odl-0c-H4a" secondAttribute="bottom" constant="40" id="eBr-Lq-3WO"/>
                             <constraint firstItem="Odl-0c-H4a" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="mwY-av-imK"/>
                             <constraint firstItem="j26-t6-uKF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="ncc-U4-XAt"/>
+                            <constraint firstItem="Odl-0c-H4a" firstAttribute="trailing" secondItem="j26-t6-uKF" secondAttribute="trailing" id="pX5-bC-tVe"/>
+                            <constraint firstItem="Odl-0c-H4a" firstAttribute="leading" secondItem="j26-t6-uKF" secondAttribute="leading" id="rfx-AQ-UkA"/>
+                            <constraint firstItem="j26-t6-uKF" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="tBv-XK-fTI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j26-t6-uKF" secondAttribute="trailing" constant="100" id="uBG-vD-3lo"/>
                             <constraint firstItem="Odl-0c-H4a" firstAttribute="top" secondItem="j26-t6-uKF" secondAttribute="bottom" constant="10" id="wOh-JR-JRd"/>
+                            <constraint firstItem="Odl-0c-H4a" firstAttribute="trailing" secondItem="j26-t6-uKF" secondAttribute="trailing" id="yo4-uu-lsV"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="B5d-br-yWF"/>
+                                <exclude reference="ZJP-nx-XUa"/>
+                                <exclude reference="tBv-XK-fTI"/>
+                                <exclude reference="LEw-aw-N9m"/>
+                                <exclude reference="eBr-Lq-3WO"/>
+                                <exclude reference="pX5-bC-tVe"/>
+                                <exclude reference="rfx-AQ-UkA"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="uBG-vD-3lo"/>
+                                <exclude reference="B5d-br-yWF"/>
+                                <include reference="ZJP-nx-XUa"/>
+                                <exclude reference="ad6-4B-Sap"/>
+                                <exclude reference="ncc-U4-XAt"/>
+                                <exclude reference="tBv-XK-fTI"/>
+                                <exclude reference="LEw-aw-N9m"/>
+                                <include reference="eBr-Lq-3WO"/>
+                                <include reference="pX5-bC-tVe"/>
+                                <exclude reference="rfx-AQ-UkA"/>
+                                <exclude reference="yo4-uu-lsV"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-65.217391304347828" y="372.554347826087"/>
+            <point key="canvasLocation" x="230" y="350"/>
         </scene>
     </scenes>
     <resources>
         <image name="Icon" width="60" height="60"/>
-        <image name="Instagrid" width="41.333332061767578" height="13"/>
+        <image name="Instagrid" width="41.5" height="13"/>
     </resources>
 </document>
