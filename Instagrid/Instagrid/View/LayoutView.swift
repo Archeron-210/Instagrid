@@ -17,7 +17,8 @@ class LayoutView: UIView {
             setStyle(style)
         }
     }
-    private func setStyle(_ style: Style) {
+    
+    func setStyle(_ style: Style) {
         switch style {
         case .layout1:
             layout1.isHidden = false
@@ -33,5 +34,4 @@ class LayoutView: UIView {
             layout3.isHidden = false
         }
     }
-
 }
