@@ -26,14 +26,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Instagrid " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fw7-Xd-hmk">
-                                <rect key="frame" x="109.5" y="40" width="156" height="45.5"/>
+                                <rect key="frame" x="121" y="40" width="133.5" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="Y83-8G-S1Q"/>
                                     <constraint firstAttribute="height" constant="34" id="qPE-Or-KfE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="35"/>
+                                <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="30"/>
                                 <color key="textColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Y83-8G-S1Q"/>
@@ -417,10 +418,10 @@
                                 </connections>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Left" translatesAutoresizingMaskIntoConstraints="NO" id="1gN-d5-THy">
-                                <rect key="frame" x="177.5" y="123" width="20" height="20"/>
+                                <rect key="frame" x="180" y="128" width="15" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1gN-d5-THy" secondAttribute="height" multiplier="1:1" id="ku5-G3-zAa"/>
-                                    <constraint firstAttribute="width" constant="20" id="wJi-Gb-wa6"/>
+                                    <constraint firstAttribute="width" constant="15" id="wJi-Gb-wa6"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="rWs-gf-e7n">
