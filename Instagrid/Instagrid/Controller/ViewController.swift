@@ -22,6 +22,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(swipeUp(_:)))
         swipeUp.direction = .up
         layoutView.addGestureRecognizer(swipeUp)
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeLeft(_:)))
+        swipeLeft.direction = .left
+        layoutView.addGestureRecognizer(swipeLeft)
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -84,11 +87,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @objc func swipeUp(_ sender: UISwipeGestureRecognizer) {
         if UIDevice.current.orientation.isPortrait {
-            UIView.animate(withDuration: 1) {
-                // le resultat du calcul pour faire disparaitre la LayoutView :
-                // La translation en y a appliquer est la taille de l'ecran divisée par 2 + la taille de la vue divisée par 2
-                // On applique la translation a partir du centre le layoutView.
+            UIView.animate(withDuration: 0.5) {
+                // le résultat du calcul pour faire disparaitre la LayoutView :
+                // La translation en y = la taille de l'ecran divisée par 2 + la taille de la vue divisée par 2
+                // On applique la translation a partir du centre de layoutView.
                 let translationY = -(self.view.bounds.height/2 + self.layoutView.bounds.height/2)
+                // on applique la translation :
                 self.layoutView.transform = CGAffineTransform(translationX: 0, y: translationY)
             } completion: { (success) in
                 self.shareImage()
@@ -96,8 +100,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    @objc func swipeLeft(_ sender: UISwipeGestureRecognizer) {
+        if UIDevice.current.orientation.isLandscape {
+            UIView.animate(withDuration: 0.5) {
+                // le résultat du calcul avec la translation en x cette fois pour faire disparaitre la LayoutView :
+                let translationX = -(self.view.bounds.width/2 + self.layoutView.bounds.width/2)
+                // on applique la translation :
+                self.layoutView.transform = CGAffineTransform(translationX: translationX, y: 0)
+            } completion: { (success) in
+                self.shareImage()
+            }
+        }
+    }
+    
     func reverseTranslation() {
-        UIView.animate(withDuration: 1) {
+        UIView.animate(withDuration: 0.5) {
             self.layoutView.transform = .identity
         }
     }
