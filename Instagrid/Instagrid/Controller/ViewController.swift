@@ -18,6 +18,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         orientationChange()
+        setDefaultStyle()
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -34,6 +35,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             arrowImage.image = #imageLiteral(resourceName: "Arrow Up")
             swipeLabel.text = "Swipe up to share"
         }
+    }
+    
+    private func setDefaultStyle() {
+        layoutView.setStyle(.layout1)
+        layoutOneSelected.isHidden = false
+        layoutTwoSelected.isHidden = true
+        layoutThreeSelected.isHidden = true
     }
     
    
