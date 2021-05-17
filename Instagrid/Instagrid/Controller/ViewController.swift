@@ -19,6 +19,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         orientationChange()
         setDefaultStyle()
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(swipeUp(_:)))
+        swipeUp.direction = .up
+        layoutView.addGestureRecognizer(swipeUp)
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -44,7 +47,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         layoutThreeSelected.isHidden = true
     }
     
-   
+   // tous les boutons sont connectés à cette même méthode, on effectue un switch pour déterminer
+    // quel bouton doit avoir quel effet :
     @IBAction func selectLayout(_ sender: UIButton) {
         switch sender {
         case layoutOneButton:
@@ -72,10 +76,44 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         selectedButton = sender
         // on créé une variable picker qui est un UIImagePickerController :
         let picker = UIImagePickerController()
-        // on précise que le delegate du picker est bien notre ViewController :
+        // on précise que le delegate du picker est bien notre ViewController avec self :
         picker.delegate = self
         // on présente sur la page le picker, et on active l'animation de son affichage :
         self.present(picker, animated: true)
+    }
+    
+    @objc func swipeUp(_ sender: UISwipeGestureRecognizer) {
+        if UIDevice.current.orientation.isPortrait {
+            UIView.animate(withDuration: 1) {
+                // le resultat du calcul pour faire disparaitre la LayoutView :
+                // La translation en y a appliquer est la taille de l'ecran divisée par 2 + la taille de la vue divisée par 2
+                // On applique la translation a partir du centre le layoutView.
+                let translationY = -(self.view.bounds.height/2 + self.layoutView.bounds.height/2)
+                self.layoutView.transform = CGAffineTransform(translationX: 0, y: translationY)
+            } completion: { (success) in
+                self.shareImage()
+            }
+        }
+    }
+    
+    func reverseTranslation() {
+        UIView.animate(withDuration: 1) {
+            self.layoutView.transform = .identity
+        }
+    }
+    
+    func shareImage() {
+        let activityItems = [exportImage()]
+        let activityController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+        activityController.completionWithItemsHandler = { activity, completed, items, error in
+            self.reverseTranslation()
+        }
+        self.present(activityController, animated: true)
+    }
+    
+    func exportImage() -> UIImage {
+        // exporter le collage en une image
+        return UIImage()
     }
     
     // MARK: - UIImagePickerControllerDelegate
@@ -90,7 +128,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             // on repasse la valeur de selectedButton a nil pour éviter les erreurs sur un bouton
             // précédemment séléctionné :
             selectedButton = nil
-            // on enlève le picker avec son animation de dismiss une fois l'image affichée :
+            // on enlève le picker avec son animation de dismiss :
             picker.dismiss(animated: true)
         }
     }
