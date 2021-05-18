@@ -2,6 +2,8 @@
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    // MARK: - Outlets
     @IBOutlet weak var arrowImage: UIImageView!
     @IBOutlet weak var swipeLabel: UILabel!
     @IBOutlet weak var layoutOneButton: UIButton!
@@ -13,7 +15,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var layoutView: LayoutView!
     
     // on créé une variable selectedButton qui est un UIButton et qui représente le bouton sur lequel on a appuyé :
-    var selectedButton: UIButton?
+    private var selectedButton: UIButton?
+    
+    
+    // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,31 +34,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         swipeLeft.direction = .left
         layoutView.addGestureRecognizer(swipeLeft)
     }
+    
     // fonction qui permet d'adapter les éléments d'interface suivant l'orientation du device :
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         orientationChange()
     }
-    // fonction qui s'execute au changement d'orientation :
-    private func orientationChange() {
-        if UIDevice.current.orientation.isLandscape {
-            arrowImage.image = #imageLiteral(resourceName: "Arrow Left")
-            swipeLabel.text = "Swipe left to share"
-        }
-        else {
-            arrowImage.image = #imageLiteral(resourceName: "Arrow Up")
-            swipeLabel.text = "Swipe up to share"
-        }
-    }
-    // le style par défaut :
-    private func setDefaultStyle() {
-        layoutView.setStyle(.layout1)
-        layoutOneSelected.isHidden = false
-        layoutTwoSelected.isHidden = true
-        layoutThreeSelected.isHidden = true
-    }
     
-   // tous les boutons sont connectés à cette même méthode, on effectue un switch pour déterminer
+    
+    // MARK: - Actions
+    
+    // tous les boutons sont connectés à cette même méthode, on effectue un switch pour déterminer
     // quel bouton doit avoir quel effet :
     @IBAction func selectLayout(_ sender: UIButton) {
         switch sender {
@@ -115,36 +106,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
         }
     }
-    // fonction qui rend à la vue sa position initiale :
-    func reverseTranslation() {
-        UIView.animate(withDuration: 0.5) {
-            self.layoutView.transform = .identity
-        }
-    }
-    // fonction qui va permettre le partage sur les réseaux sociaux :
-    func shareImage() {
-        // on stocke déjà ce que l'on veut exporter :
-        let activityItems = [exportImage()]
-        // puis on créé une instance de UIActivityViewController qui prend en paramètre
-        // ce que l'on souhaite partager, et les supports de partages désirés,
-        // ici à nil pour obtenir les options automatiques qui peuvent partager des images :
-        let activityController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
-        // on précise ensuite dans une closure l'action à réaliser quand le partage a été effectué,
-        // ici l'animation de retour :
-        activityController.completionWithItemsHandler = { activity, completed, items, error in
-            self.reverseTranslation()
-        }
-        self.present(activityController, animated: true)
-    }
     
-    // fonction qui permet de transformer notre layoutView en une image à exporter :
-    func exportImage() -> UIImage {
-        let renderer = UIGraphicsImageRenderer(size: layoutView.bounds.size)
-        let image = renderer.image { ctx in
-            layoutView.drawHierarchy(in: layoutView.bounds, afterScreenUpdates: true)
-        }
-        return image
-    }
     
     // MARK: - UIImagePickerControllerDelegate
     
@@ -160,6 +122,61 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             selectedButton = nil
             // on enlève le picker avec son animation de dismiss :
             picker.dismiss(animated: true)
+        }
+    }
+    
+    
+    // MARK: - Private func
+    
+    // le style par défaut :
+    private func setDefaultStyle() {
+        layoutView.setStyle(.layout1)
+        layoutOneSelected.isHidden = false
+        layoutTwoSelected.isHidden = true
+        layoutThreeSelected.isHidden = true
+    }
+    
+    // fonction qui s'execute au changement d'orientation :
+    private func orientationChange() {
+        if UIDevice.current.orientation.isLandscape {
+            arrowImage.image = #imageLiteral(resourceName: "Arrow Left")
+            swipeLabel.text = "Swipe left to share"
+        }
+        else {
+            arrowImage.image = #imageLiteral(resourceName: "Arrow Up")
+            swipeLabel.text = "Swipe up to share"
+        }
+    }
+    
+    // fonction qui va permettre le partage sur les réseaux sociaux :
+    private func shareImage() {
+        // on stocke déjà ce que l'on veut exporter :
+        let activityItems = [exportImage()]
+        // puis on créé une instance de UIActivityViewController qui prend en paramètre
+        // ce que l'on souhaite partager, et les supports de partages désirés,
+        // ici à nil pour obtenir les options automatiques qui peuvent partager des images :
+        let activityController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+        // on précise ensuite dans une closure l'action à réaliser quand le partage a été effectué,
+        // ici l'animation de retour :
+        activityController.completionWithItemsHandler = { activity, completed, items, error in
+            self.reverseTranslation()
+        }
+        self.present(activityController, animated: true)
+    }
+    
+    // fonction qui permet de transformer notre layoutView en une image à exporter :
+    private func exportImage() -> UIImage {
+        let renderer = UIGraphicsImageRenderer(size: layoutView.bounds.size)
+        let image = renderer.image { ctx in
+            layoutView.drawHierarchy(in: layoutView.bounds, afterScreenUpdates: true)
+        }
+        return image
+    }
+    
+    // fonction qui rend à la vue sa position initiale :
+    private func reverseTranslation() {
+        UIView.animate(withDuration: 0.5) {
+            self.layoutView.transform = .identity
         }
     }
 }
