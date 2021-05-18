@@ -1,5 +1,6 @@
 
 import UIKit
+import Photos
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -33,6 +34,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeLeft(_:)))
         swipeLeft.direction = .left
         layoutView.addGestureRecognizer(swipeLeft)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // on demande l'autorisation a l'utilisateur d'acceder a ses photos
+//        PHPhotoLibrary.requestAuthorization { (status) in
+//            // on ne fait rien avec cette autorisation pour le moment.
+//        }
     }
     
     // fonction qui permet d'adapter les éléments d'interface suivant l'orientation du device :
@@ -150,6 +159,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // fonction qui va permettre le partage sur les réseaux sociaux :
     private func shareImage() {
+        // on vérifie la permission d'enregistrer des images
+        // on stocke le resultat true ou false dans canSaveImage
+        let canSaveImage = checkAuthorizationStatus()
+        // si c'est false, on sort avec return
+        if canSaveImage == false {
+            return
+        }
         // on stocke déjà ce que l'on veut exporter :
         let activityItems = [exportImage()]
         // puis on créé une instance de UIActivityViewController qui prend en paramètre
@@ -162,6 +178,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             self.reverseTranslation()
         }
         self.present(activityController, animated: true)
+    }
+    
+    private func checkAuthorizationStatus() -> Bool {
+        let readWriteStatus = PHPhotoLibrary.authorizationStatus()
+        switch readWriteStatus {
+        case .notDetermined:
+            // On affiche une alerte qui dit qu'on a pas les droits
+            // L'alerte a un seul bouton: OK
+            // Quand l'utilisateur clique sur OK, on affiche la popup qui demande les droits
+            PHPhotoLibrary.requestAuthorization { (status) in }
+            return false
+        case .authorized:
+            return true
+        default:
+            // Afficher une alerte qui dit qu'on a pas l'autorisation necessaire
+            return false
+        }
     }
     
     // fonction qui permet de transformer notre layoutView en une image à exporter :

@@ -43,10 +43,16 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>CFBundleDisplayName</key>
+	<string></string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Delm-Medium.otf</string>
 		<string>ThirstySoftRegular.otf</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>We need access to import your pictures</string>
 </dict>
 </plist>
