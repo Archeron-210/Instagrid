@@ -19,19 +19,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         orientationChange()
         setDefaultStyle()
+        // on créé le geste Swipe Up en précisant la target, et l'action à réaliser,
+        // puis la direction du swipe, et on ajoute le geste :
         let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(swipeUp(_:)))
         swipeUp.direction = .up
         layoutView.addGestureRecognizer(swipeUp)
+        // pareil pour Swipe Left :
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeLeft(_:)))
         swipeLeft.direction = .left
         layoutView.addGestureRecognizer(swipeLeft)
     }
-
+    // fonction qui permet d'adapter les éléments d'interface suivant l'orientation du device :
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         orientationChange()
     }
-    
+    // fonction qui s'execute au changement d'orientation :
     private func orientationChange() {
         if UIDevice.current.orientation.isLandscape {
             arrowImage.image = #imageLiteral(resourceName: "Arrow Left")
@@ -42,7 +45,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             swipeLabel.text = "Swipe up to share"
         }
     }
-    
+    // le style par défaut :
     private func setDefaultStyle() {
         layoutView.setStyle(.layout1)
         layoutOneSelected.isHidden = false
@@ -112,25 +115,35 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
         }
     }
-    
+    // fonction qui rend à la vue sa position initiale :
     func reverseTranslation() {
         UIView.animate(withDuration: 0.5) {
             self.layoutView.transform = .identity
         }
     }
-    
+    // fonction qui va permettre le partage sur les réseaux sociaux :
     func shareImage() {
+        // on stocke déjà ce que l'on veut exporter :
         let activityItems = [exportImage()]
+        // puis on créé une instance de UIActivityViewController qui prend en paramètre
+        // ce que l'on souhaite partager, et les supports de partages désirés,
+        // ici à nil pour obtenir les options automatiques qui peuvent partager des images :
         let activityController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+        // on précise ensuite dans une closure l'action à réaliser quand le partage a été effectué,
+        // ici l'animation de retour :
         activityController.completionWithItemsHandler = { activity, completed, items, error in
             self.reverseTranslation()
         }
         self.present(activityController, animated: true)
     }
     
+    // fonction qui permet de transformer notre layoutView en une image à exporter :
     func exportImage() -> UIImage {
-        // exporter le collage en une image
-        return UIImage()
+        let renderer = UIGraphicsImageRenderer(size: layoutView.bounds.size)
+        let image = renderer.image { ctx in
+            layoutView.drawHierarchy(in: layoutView.bounds, afterScreenUpdates: true)
+        }
+        return image
     }
     
     // MARK: - UIImagePickerControllerDelegate
