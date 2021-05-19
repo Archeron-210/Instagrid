@@ -164,6 +164,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let canSaveImage = checkAuthorizationStatus()
         // si c'est false, on sort avec return
         if canSaveImage == false {
+            reverseTranslation()
             return
         }
         // on stocke déjà ce que l'on veut exporter :
@@ -184,17 +185,38 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let readWriteStatus = PHPhotoLibrary.authorizationStatus()
         switch readWriteStatus {
         case .notDetermined:
-            // On affiche une alerte qui dit qu'on a pas les droits
-            // L'alerte a un seul bouton: OK
-            // Quand l'utilisateur clique sur OK, on affiche la popup qui demande les droits
-            PHPhotoLibrary.requestAuthorization { (status) in }
+            accessAlert()
             return false
         case .authorized:
             return true
         default:
-            // Afficher une alerte qui dit qu'on a pas l'autorisation necessaire
+            needAccessAlert()
             return false
         }
+    }
+    
+    // alerte qui indique à l'utilisateur qu'on a besoin des droits :
+    private func accessAlert() {
+        let alertController = UIAlertController(title: "Warning", message: "We need access to your gallery", preferredStyle: .alert)
+        // on créé le bouton qui va ensuite masquer l'alerte et demander les autorisations :
+        alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+            PHPhotoLibrary.requestAuthorization { (status) in }
+        }))
+        // on l'affiche :
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    // alerte qui indique à l'utilisateur qu'il manque les autorisations nécessaires :
+    private func needAccessAlert() {
+        let alertController = UIAlertController(title: "Authorization denied", message: "Go to Settings > Instagrid and grant access to your photos to continue", preferredStyle: .alert)
+        // on créé le bouton qui va envoyer l'utilisateur dans ses paramètres et ensuite masquer l'alerte :
+        alertController.addAction(UIAlertAction(title: "Go to Settings", style: .default, handler: { (action) in
+            if let settingsURL = URL(string: UIApplication.openSettingsURLString) {
+                UIApplication.shared.open(settingsURL)
+            }
+        }))
+        // on l'affiche :
+        present(alertController, animated: true, completion: nil)
     }
     
     // fonction qui permet de transformer notre layoutView en une image à exporter :
