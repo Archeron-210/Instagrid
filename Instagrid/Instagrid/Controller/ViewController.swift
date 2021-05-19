@@ -77,6 +77,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    // tous les boutons font la même chose, ils sont tous reliés à cette action :
     @IBAction func buttonTapped(_ sender: UIButton) {
         // on précise que le sender est le bouton qui vient d'être tapé :
         selectedButton = sender
@@ -159,10 +160,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // fonction qui va permettre le partage sur les réseaux sociaux :
     private func shareImage() {
-        // on vérifie la permission d'enregistrer des images
-        // on stocke le resultat true ou false dans canSaveImage
+        // on vérifie la permission d'enregistrer des images et
+        // on stocke le resultat true ou false dans canSaveImage :
         let canSaveImage = checkAuthorizationStatus()
-        // si c'est false, on sort avec return
+        // si c'est false, on lance l'animation de retour et on sort avec return :
         if canSaveImage == false {
             reverseTranslation()
             return
@@ -178,6 +179,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         activityController.completionWithItemsHandler = { activity, completed, items, error in
             self.reverseTranslation()
         }
+        // on l'affiche :
         self.present(activityController, animated: true)
     }
     
