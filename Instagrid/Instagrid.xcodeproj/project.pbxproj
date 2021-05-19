@@ -15,6 +15,8 @@
 		20B5F860263FF2ED00B3DA3D /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 20B5F85F263FF2ED00B3DA3D /* Delm-Medium.otf */; };
 		20B5F863263FF2F800B3DA3D /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 20B5F862263FF2F800B3DA3D /* ThirstySoftRegular.otf */; };
 		20C7A4D9264BCB3D0098E712 /* LayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7A4D8264BCB3D0098E712 /* LayoutView.swift */; };
+		20C7A4DD265547B20098E712 /* LayoutOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7A4DC265547B20098E712 /* LayoutOptionView.swift */; };
+		20C7A4E02655505D0098E712 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7A4DF2655505D0098E712 /* Style.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		20B5F85F263FF2ED00B3DA3D /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
 		20B5F862263FF2F800B3DA3D /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		20C7A4D8264BCB3D0098E712 /* LayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutView.swift; sourceTree = "<group>"; };
+		20C7A4DC265547B20098E712 /* LayoutOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutOptionView.swift; sourceTree = SOURCE_ROOT; };
+		20C7A4DF2655505D0098E712 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Style.swift; path = Instagrid/View/Style.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 		20B5F866263FFC3800B3DA3D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				20C7A4DF2655505D0098E712 /* Style.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -78,6 +83,7 @@
 		20B5F867263FFC4700B3DA3D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				20C7A4DC265547B20098E712 /* LayoutOptionView.swift */,
 				20B5F850263FEA8800B3DA3D /* Main.storyboard */,
 				20C7A4D8264BCB3D0098E712 /* LayoutView.swift */,
 			);
@@ -180,6 +186,8 @@
 				20B5F84F263FEA8800B3DA3D /* ViewController.swift in Sources */,
 				20B5F84B263FEA8800B3DA3D /* AppDelegate.swift in Sources */,
 				20C7A4D9264BCB3D0098E712 /* LayoutView.swift in Sources */,
+				20C7A4DD265547B20098E712 /* LayoutOptionView.swift in Sources */,
+				20C7A4E02655505D0098E712 /* Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

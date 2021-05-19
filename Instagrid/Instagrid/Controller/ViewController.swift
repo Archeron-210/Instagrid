@@ -7,13 +7,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: - Outlets
     @IBOutlet weak var arrowImage: UIImageView!
     @IBOutlet weak var swipeLabel: UILabel!
-    @IBOutlet weak var layoutOneButton: UIButton!
-    @IBOutlet weak var layoutOneSelected: UIImageView!
-    @IBOutlet weak var layoutTwoButton: UIButton!
-    @IBOutlet weak var layoutTwoSelected: UIImageView!
-    @IBOutlet weak var layoutThreeButton: UIButton!
-    @IBOutlet weak var layoutThreeSelected: UIImageView!
     @IBOutlet weak var layoutView: LayoutView!
+    @IBOutlet weak var layoutOptions: LayoutOptionView?
     
     // on créé une variable selectedButton qui est un UIButton et qui représente le bouton sur lequel on a appuyé :
     private var selectedButton: UIButton?
@@ -34,14 +29,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeLeft(_:)))
         swipeLeft.direction = .left
         layoutView.addGestureRecognizer(swipeLeft)
+        
+        let name1 = Notification.Name(rawValue: "LayoutStyle1")
+        NotificationCenter.default.addObserver(self, selector: #selector(selectLayout1), name: name1, object: nil)
+        
+        let name2 = Notification.Name(rawValue: "LayoutStyle2")
+        NotificationCenter.default.addObserver(self, selector: #selector(selectLayout2), name: name2, object: nil)
+        
+        let name3 = Notification.Name(rawValue: "LayoutStyle3")
+        NotificationCenter.default.addObserver(self, selector: #selector(selectLayout3), name: name3, object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        // on demande l'autorisation a l'utilisateur d'acceder a ses photos
-//        PHPhotoLibrary.requestAuthorization { (status) in
-//            // on ne fait rien avec cette autorisation pour le moment.
-//        }
+         // on demande l'autorisation a l'utilisateur d'acceder a ses photos
+        PHPhotoLibrary.requestAuthorization { (status) in
+            // on ne fait rien avec cette autorisation pour le moment.
+        }
     }
     
     // fonction qui permet d'adapter les éléments d'interface suivant l'orientation du device :
@@ -53,28 +57,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // MARK: - Actions
     
-    // tous les boutons sont connectés à cette même méthode, on effectue un switch pour déterminer
-    // quel bouton doit avoir quel effet :
-    @IBAction func selectLayout(_ sender: UIButton) {
-        switch sender {
-        case layoutOneButton:
-            layoutView.setStyle(.layout1)
-            layoutOneSelected.isHidden = false
-            layoutTwoSelected.isHidden = true
-            layoutThreeSelected.isHidden = true
-        case layoutTwoButton:
-            layoutView.setStyle(.layout2)
-            layoutTwoSelected.isHidden = false
-            layoutOneSelected.isHidden = true
-            layoutThreeSelected.isHidden = true
-        case layoutThreeButton:
-            layoutView.setStyle(.layout3)
-            layoutThreeSelected.isHidden = false
-            layoutTwoSelected.isHidden = true
-            layoutOneSelected.isHidden = true
-        default:
-            break
-        }
+
+    // Fonctions appelées quand on reçoit la notification correspondante,
+    // qui va permettre d'afficher le layout selon le style choisi :
+    @objc func selectLayout1() {
+        layoutView.setStyle(.layout1)
+    }
+    
+    @objc func selectLayout2() {
+        layoutView.setStyle(.layout2)
+    }
+    
+    @objc func selectLayout3() {
+        layoutView.setStyle(.layout3)
     }
     
     // tous les boutons font la même chose, ils sont tous reliés à cette action :
@@ -141,9 +136,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // le style par défaut :
     private func setDefaultStyle() {
         layoutView.setStyle(.layout1)
-        layoutOneSelected.isHidden = false
-        layoutTwoSelected.isHidden = true
-        layoutThreeSelected.isHidden = true
+        layoutOptions?.setLayoutStyle(style: .layout1)
+        
     }
     
     // fonction qui s'execute au changement d'orientation :
