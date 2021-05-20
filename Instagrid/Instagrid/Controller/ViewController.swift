@@ -29,15 +29,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeLeft(_:)))
         swipeLeft.direction = .left
         layoutView.addGestureRecognizer(swipeLeft)
-        
-        let name1 = Notification.Name(rawValue: "LayoutStyle1")
-        NotificationCenter.default.addObserver(self, selector: #selector(selectLayout1), name: name1, object: nil)
-        
-        let name2 = Notification.Name(rawValue: "LayoutStyle2")
-        NotificationCenter.default.addObserver(self, selector: #selector(selectLayout2), name: name2, object: nil)
-        
-        let name3 = Notification.Name(rawValue: "LayoutStyle3")
-        NotificationCenter.default.addObserver(self, selector: #selector(selectLayout3), name: name3, object: nil)
+        // on reçoit ici la notification :
+        let name = Notification.Name(rawValue: "LayoutStyle")
+        NotificationCenter.default.addObserver(self, selector: #selector(selectLayout(_:)), name: name, object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -58,18 +52,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: - Actions
     
 
-    // Fonctions appelées quand on reçoit la notification correspondante,
+    // Fonction appelée quand on reçoit la notification émise du LayoutOptionView,
     // qui va permettre d'afficher le layout selon le style choisi :
-    @objc func selectLayout1() {
-        layoutView.setStyle(.layout1)
-    }
-    
-    @objc func selectLayout2() {
-        layoutView.setStyle(.layout2)
-    }
-    
-    @objc func selectLayout3() {
-        layoutView.setStyle(.layout3)
+    @objc func selectLayout(_ notification: Notification) {
+        if let style = notification.userInfo?["style"] as? String {
+            switch style {
+            case "layout1":
+                layoutView.setStyle(.layout1)
+            case "layout2":
+                layoutView.setStyle(.layout2)
+            case "layout3":
+                layoutView.setStyle(.layout3)
+            default:
+                return
+            }
+        }
     }
     
     // tous les boutons font la même chose, ils sont tous reliés à cette action :

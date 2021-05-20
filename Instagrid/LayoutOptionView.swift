@@ -13,21 +13,21 @@ class LayoutOptionView: UIView {
     // tous les boutons sont connectés à cette même méthode, on effectue un switch pour déterminer
     // quel bouton doit avoir quel effet :
     @IBAction func selectLayout(_ sender: UIButton) {
+        // on créé le nom de la notification qui va être envoyée au controller :
+        let name = Notification.Name(rawValue: "LayoutStyle")
         switch sender {
         case layoutOneButton:
-            // la notification qui sera envoyée au controller :
-            let name = Notification.Name(rawValue: "LayoutStyle1")
-            let notification = Notification(name: name)
+            // on créé la notification en attribuant la clé "style" à la valeur "layout1", puis on la poste :
+            let notification = Notification(name: name, object: nil, userInfo: ["style": "layout1"])
             NotificationCenter.default.post(notification)
             setLayoutStyle(style: .layout1)
         case layoutTwoButton:
-            let name = Notification.Name(rawValue: "LayoutStyle2")
-            let notification = Notification(name: name)
+            // la même chose ici puis pour le 3eme cas :
+            let notification = Notification(name: name, object: nil, userInfo: ["style": "layout2"])
             NotificationCenter.default.post(notification)
             setLayoutStyle(style: .layout2)
         case layoutThreeButton:
-            let name = Notification.Name(rawValue: "LayoutStyle3")
-            let notification = Notification(name: name)
+            let notification = Notification(name: name, object: nil, userInfo: ["style": "layout3"])
             NotificationCenter.default.post(notification)
             setLayoutStyle(style: .layout3)
         default:
