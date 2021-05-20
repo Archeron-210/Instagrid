@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -13,17 +13,17 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="j26-t6-uKF">
-                                <rect key="frame" x="80" y="140" width="160" height="160"/>
+                                <rect key="frame" x="80" y="184" width="215" height="215"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="j26-t6-uKF" secondAttribute="height" multiplier="1:1" id="NGu-It-152"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Instagrid-2" translatesAutoresizingMaskIntoConstraints="NO" id="GZo-Im-Ae2">
-                                <rect key="frame" x="80" y="310" width="160" height="55"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Instagrid" translatesAutoresizingMaskIntoConstraints="NO" id="GZo-Im-Ae2">
+                                <rect key="frame" x="80" y="409" width="215" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="7pm-i0-BJq"/>
                                 </constraints>
@@ -87,11 +87,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1220" y="-180"/>
+            <point key="canvasLocation" x="-1484" y="-330"/>
         </scene>
     </scenes>
     <resources>
         <image name="Icon" width="60" height="60"/>
-        <image name="Instagrid-2" width="130.5" height="33.5"/>
+        <image name="Instagrid" width="130.66667175292969" height="33.333332061767578"/>
     </resources>
 </document>
