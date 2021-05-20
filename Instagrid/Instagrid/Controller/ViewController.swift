@@ -8,7 +8,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var arrowImage: UIImageView!
     @IBOutlet weak var swipeLabel: UILabel!
     @IBOutlet weak var layoutView: LayoutView!
-    @IBOutlet weak var layoutOptions: LayoutOptionView?
+    @IBOutlet weak var layoutOptions: LayoutOptionView!
     
     // on créé une variable selectedButton qui est un UIButton et qui représente le bouton sur lequel on a appuyé :
     private var selectedButton: UIButton?
@@ -53,7 +53,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
 
     // Fonction appelée quand on reçoit la notification émise du LayoutOptionView,
-    // qui va permettre d'afficher le layout selon le style choisi :
+    // qui va permettre d'afficher le layout selon le style choisi grâce à un switch :
     @objc func selectLayout(_ notification: Notification) {
         if let style = notification.userInfo?["style"] as? String {
             switch style {
