@@ -64,7 +64,7 @@
                                                             <constraint firstAttribute="width" constant="30" id="U4z-sW-aUV"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NS-z2-bDj">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NS-z2-bDj">
                                                         <rect key="frame" x="0.0" y="0.0" width="265" height="125"/>
                                                         <connections>
                                                             <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7JB-tp-v74"/>
@@ -92,7 +92,7 @@
                                                             <constraint firstAttribute="width" constant="30" id="weo-vw-JY7"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kom-7n-sKN">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kom-7n-sKN">
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                                         <connections>
                                                             <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J2w-d9-A8c"/>
@@ -120,7 +120,7 @@
                                                             <constraint firstAttribute="height" constant="30" id="uii-OK-7sz"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2E-Wd-jpM">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2E-Wd-jpM">
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                                         <connections>
                                                             <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Oe-pM-hYT"/>
@@ -168,7 +168,7 @@
                                                             <constraint firstAttribute="height" constant="30" id="fX5-ed-4Dc"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0T-uj-r3P">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0T-uj-r3P">
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                                         <connections>
                                                             <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AAZ-VZ-yD4"/>
@@ -196,7 +196,7 @@
                                                             <constraint firstAttribute="width" constant="30" id="pPz-Vm-XWl"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvc-WG-Xoy">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvc-WG-Xoy">
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                                         <connections>
                                                             <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EVI-Jq-c0k"/>
@@ -224,7 +224,7 @@
                                                             <constraint firstAttribute="width" constant="30" id="eSW-OW-MUa"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcz-RS-z9d">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcz-RS-z9d">
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                                         <connections>
                                                             <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="720-XE-FzJ"/>
@@ -252,7 +252,7 @@
                                                             <constraint firstAttribute="height" constant="30" id="skC-we-CD0"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srt-Wp-7rE">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srt-Wp-7rE">
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                                         <connections>
                                                             <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2f2-9o-Ju9"/>
@@ -304,7 +304,7 @@
                                                             <constraint firstAttribute="height" constant="30" id="Mj3-7a-fSg"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYk-Je-c3V">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYk-Je-c3V">
                                                         <rect key="frame" x="0.0" y="0.0" width="265" height="125"/>
                                                         <connections>
                                                             <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8bf-sO-kL5"/>
@@ -331,7 +331,7 @@
                                                             <constraint firstAttribute="width" constant="30" id="vzJ-qo-oxD"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AO-7N-wK0">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AO-7N-wK0">
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                                         <connections>
                                                             <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z4S-5I-ml8"/>
@@ -359,7 +359,7 @@
                                                             <constraint firstAttribute="width" constant="30" id="GPt-gB-mHA"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uF-nJ-f4D">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uF-nJ-f4D">
                                                         <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                                         <connections>
                                                             <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3eI-VB-9jV"/>
@@ -574,13 +574,13 @@
                                 <exclude reference="64a-Vt-RnH"/>
                                 <exclude reference="bh9-Xg-y9d"/>
                                 <exclude reference="qZF-3I-ldp"/>
-                                <exclude reference="pXb-4j-lxI"/>
-                                <exclude reference="pru-ec-Z5F"/>
                                 <exclude reference="GIG-fC-m78"/>
                                 <exclude reference="P8Q-Ph-nJW"/>
                                 <exclude reference="v8D-sF-iNf"/>
                                 <exclude reference="6yg-hs-tBd"/>
                                 <exclude reference="l28-1o-bU9"/>
+                                <exclude reference="pXb-4j-lxI"/>
+                                <exclude reference="pru-ec-Z5F"/>
                                 <exclude reference="R4d-mZ-hjY"/>
                                 <exclude reference="uKN-Q0-w9x"/>
                                 <exclude reference="vzY-ev-gqP"/>
@@ -594,9 +594,6 @@
                                 <exclude reference="YpF-od-zv0"/>
                                 <include reference="bh9-Xg-y9d"/>
                                 <exclude reference="qZF-3I-ldp"/>
-                                <exclude reference="Qg5-hX-fPE"/>
-                                <exclude reference="pXb-4j-lxI"/>
-                                <exclude reference="pru-ec-Z5F"/>
                                 <include reference="GIG-fC-m78"/>
                                 <include reference="P8Q-Ph-nJW"/>
                                 <exclude reference="R6L-aV-7q0"/>
@@ -606,6 +603,9 @@
                                 <exclude reference="Utu-NH-ybP"/>
                                 <exclude reference="dki-r8-UrH"/>
                                 <include reference="l28-1o-bU9"/>
+                                <exclude reference="Qg5-hX-fPE"/>
+                                <exclude reference="pXb-4j-lxI"/>
+                                <exclude reference="pru-ec-Z5F"/>
                                 <include reference="R4d-mZ-hjY"/>
                                 <exclude reference="WA7-mz-YdO"/>
                                 <include reference="uKN-Q0-w9x"/>

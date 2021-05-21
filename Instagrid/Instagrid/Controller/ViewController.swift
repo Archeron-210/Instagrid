@@ -117,8 +117,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // on créé une variable image dans laquelle on déballe l'image choisie par l'utilisateur
         // s'il y a bien une image :
         if let image = info[.originalImage] as? UIImage {
+            // on change le mode d'affichage de l'image du bouton en scaleAspectFill
+            selectedButton?.imageView?.contentMode = .scaleAspectFill
             // on set l'image selectionnée sur le bouton pour qu'il l'affiche en état normal :
-            selectedButton?.setBackgroundImage(image, for: .normal)
+            selectedButton?.setImage(image, for: .normal)
             // on repasse la valeur de selectedButton a nil pour éviter les erreurs sur un bouton
             // précédemment séléctionné :
             selectedButton = nil
