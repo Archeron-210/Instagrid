@@ -3,12 +3,12 @@ import UIKit
 
 class LayoutOptionView: UIView {
 
-    @IBOutlet var layoutOneButton: UIButton!
-    @IBOutlet var layoutOneSelected: UIImageView!
-    @IBOutlet var layoutTwoButton: UIButton!
-    @IBOutlet var layoutTwoSelected: UIImageView!
-    @IBOutlet var layoutThreeButton: UIButton!
-    @IBOutlet var layoutThreeSelected: UIImageView!
+    @IBOutlet weak var layoutOneButton: UIButton!
+    @IBOutlet weak var layoutOneSelected: UIImageView!
+    @IBOutlet weak var layoutTwoButton: UIButton!
+    @IBOutlet weak var layoutTwoSelected: UIImageView!
+    @IBOutlet weak var layoutThreeButton: UIButton!
+    @IBOutlet weak var layoutThreeSelected: UIImageView!
     
     // tous les boutons sont connectés à cette même méthode, on effectue un switch pour déterminer
     // quel bouton doit avoir quel effet :

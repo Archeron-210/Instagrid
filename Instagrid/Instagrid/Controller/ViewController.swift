@@ -7,8 +7,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: - Outlets
     @IBOutlet weak var arrowImage: UIImageView!
     @IBOutlet weak var swipeLabel: UILabel!
-    @IBOutlet weak var layoutView: LayoutView!
-    @IBOutlet weak var layoutOptions: LayoutOptionView!
+    @IBOutlet weak var layoutStackView: UIStackView!
+    @IBOutlet weak var layoutOneButton: UIButton!
+    @IBOutlet weak var layoutOneSelected: UIImageView!
+    @IBOutlet weak var layoutTwoButton: UIButton!
+    @IBOutlet weak var layoutTwoSelected: UIImageView!
+    @IBOutlet weak var layoutThreeButton: UIButton!
+    @IBOutlet weak var layoutThreeSelected: UIImageView!
     
     // on créé une variable selectedButton qui est un UIButton et qui représente le bouton sur lequel on a appuyé :
     private var selectedButton: UIButton?
@@ -24,11 +29,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // puis la direction du swipe, et on ajoute le geste :
         let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(swipeUp(_:)))
         swipeUp.direction = .up
-        layoutView.addGestureRecognizer(swipeUp)
+        layoutStackView.addGestureRecognizer(swipeUp)
         // pareil pour Swipe Left :
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeLeft(_:)))
         swipeLeft.direction = .left
-        layoutView.addGestureRecognizer(swipeLeft)
+        layoutStackView.addGestureRecognizer(swipeLeft)
         // on reçoit ici la notification :
         let name = Notification.Name(rawValue: "LayoutStyle")
         NotificationCenter.default.addObserver(self, selector: #selector(selectLayout(_:)), name: name, object: nil)
@@ -58,11 +63,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if let style = notification.userInfo?["style"] as? String {
             switch style {
             case "layout1":
-                layoutView.setStyle(.layout1)
+                layoutStackView.setStyle(.layout1)
             case "layout2":
-                layoutView.setStyle(.layout2)
+                layoutStackView.setStyle(.layout2)
             case "layout3":
-                layoutView.setStyle(.layout3)
+                layoutStackView.setStyle(.layout3)
             default:
                 return
             }
@@ -87,9 +92,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 // le résultat du calcul pour faire disparaitre la LayoutView :
                 // La translation en y = la taille de l'ecran divisée par 2 + la taille de la vue divisée par 2
                 // la translation s'applique a partir du centre de layoutView.
-                let translationY = -(self.view.bounds.height/2 + self.layoutView.bounds.height/2)
+                let translationY = -(self.view.bounds.height/2 + self.layoutStackView.bounds.height/2)
                 // on applique la translation :
-                self.layoutView.transform = CGAffineTransform(translationX: 0, y: translationY)
+                self.layoutStackView.transform = CGAffineTransform(translationX: 0, y: translationY)
             } completion: { (success) in
                 self.shareImage()
             }
@@ -100,9 +105,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         if UIDevice.current.orientation.isLandscape {
             UIView.animate(withDuration: 0.5) {
                 // le résultat du calcul avec la translation en x cette fois pour faire disparaitre la LayoutView :
-                let translationX = -(self.view.bounds.width/2 + self.layoutView.bounds.width/2)
+                let translationX = -(self.view.bounds.width/2 + self.layoutStackView.bounds.width/2)
                 // on applique la translation :
-                self.layoutView.transform = CGAffineTransform(translationX: translationX, y: 0)
+                self.layoutStackView.transform = CGAffineTransform(translationX: translationX, y: 0)
             } completion: { (success) in
                 self.shareImage()
             }
@@ -134,7 +139,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // le style par défaut :
     private func setDefaultStyle() {
-        layoutView.setStyle(.layout1)
+        layoutStackView.setStyle(.layout1)
         layoutOptions?.setLayoutStyle(style: .layout1)
         
     }
@@ -216,9 +221,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // fonction qui permet de transformer notre layoutView en une image à exporter :
     private func exportImage() -> UIImage {
-        let renderer = UIGraphicsImageRenderer(size: layoutView.bounds.size)
+        let renderer = UIGraphicsImageRenderer(size: layoutStackView.bounds.size)
         let image = renderer.image { ctx in
-            layoutView.drawHierarchy(in: layoutView.bounds, afterScreenUpdates: true)
+            layoutStackView.drawHierarchy(in: layoutView.bounds, afterScreenUpdates: true)
         }
         return image
     }
@@ -226,7 +231,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // fonction qui rend à la vue sa position initiale :
     private func reverseTranslation() {
         UIView.animate(withDuration: 0.5) {
-            self.layoutView.transform = .identity
+            self.layoutStackView.transform = .identity
         }
     }
 }
