@@ -42,7 +42,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-    // fonction qui permet d'adapter les éléments d'interface suivant l'orientation du device :
+    // fonction qui permet d'adapter les éléments d'interface suivant l'orientation de l'appareil :
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         orientationChange()
@@ -86,7 +86,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             UIView.animate(withDuration: 0.5) {
                 // le résultat du calcul pour faire disparaitre la LayoutView :
                 // La translation en y = la taille de l'ecran divisée par 2 + la taille de la vue divisée par 2
-                // On applique la translation a partir du centre de layoutView.
+                // la translation s'applique a partir du centre de layoutView.
                 let translationY = -(self.view.bounds.height/2 + self.layoutView.bounds.height/2)
                 // on applique la translation :
                 self.layoutView.transform = CGAffineTransform(translationX: 0, y: translationY)
