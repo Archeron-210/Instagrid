@@ -5,18 +5,28 @@ import Photos
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     // MARK: - Outlets
+    
     @IBOutlet weak var arrowImage: UIImageView!
     @IBOutlet weak var swipeLabel: UILabel!
     @IBOutlet weak var layoutStackView: UIStackView!
+    @IBOutlet weak var layoutOneGrid: UIView!
+    @IBOutlet weak var layoutTwoGrid: UIView!
+    @IBOutlet weak var layoutThreeGrid: UIView!
     @IBOutlet weak var layoutOneButton: UIButton!
-    @IBOutlet weak var layoutOneSelected: UIImageView!
     @IBOutlet weak var layoutTwoButton: UIButton!
-    @IBOutlet weak var layoutTwoSelected: UIImageView!
     @IBOutlet weak var layoutThreeButton: UIButton!
-    @IBOutlet weak var layoutThreeSelected: UIImageView!
     
-    // on créé une variable selectedButton qui est un UIButton et qui représente le bouton sur lequel on a appuyé :
+    // on créé une variable selectedButton qui est un UIButton et qui représente
+    // le bouton sur lequel on a appuyé :
     private var selectedButton: UIButton?
+    // on créé une variable style de type Style qui contient le style d'affichage de la grille,
+    // et le bouton correspondant :
+    private var style: Style = .layout1 {
+        didSet {
+            setGridStyle(style)
+            setLayoutButtonsStyle(style: style)
+        }
+    }
     
     
     // MARK: - Lifecycle
@@ -24,7 +34,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         orientationChange()
-        setDefaultStyle()
+        style = .layout1
         // on créé le geste Swipe Up en précisant la target, et l'action à réaliser,
         // puis la direction du swipe, et on ajoute le geste :
         let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(swipeUp(_:)))
@@ -34,9 +44,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(swipeLeft(_:)))
         swipeLeft.direction = .left
         layoutStackView.addGestureRecognizer(swipeLeft)
-        // on reçoit ici la notification :
-        let name = Notification.Name(rawValue: "LayoutStyle")
-        NotificationCenter.default.addObserver(self, selector: #selector(selectLayout(_:)), name: name, object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -57,20 +64,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: - Actions
     
 
-    // Fonction appelée quand on reçoit la notification émise du LayoutOptionView,
-    // qui va permettre d'afficher le layout selon le style choisi grâce à un switch :
-    @objc func selectLayout(_ notification: Notification) {
-        if let style = notification.userInfo?["style"] as? String {
-            switch style {
-            case "layout1":
-                layoutStackView.setStyle(.layout1)
-            case "layout2":
-                layoutStackView.setStyle(.layout2)
-            case "layout3":
-                layoutStackView.setStyle(.layout3)
-            default:
-                return
-            }
+    // tous les boutons sont connectés à cette même méthode, on effectue un switch pour déterminer
+    // quel bouton doit avoir quel effet :
+    @IBAction func selectLayout(_ sender: UIButton) {
+        switch sender {
+        case layoutOneButton:
+            style = .layout1
+        case layoutTwoButton:
+            style = .layout2
+        case layoutThreeButton:
+            style = .layout3
+        default:
+            break
         }
     }
     
@@ -85,6 +90,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // on présente sur la page le picker, et on active l'animation de son affichage :
         self.present(picker, animated: true)
     }
+    
+    
+    // MARK: - Gestures
     
     @objc func swipeUp(_ sender: UISwipeGestureRecognizer) {
         if UIDevice.current.orientation.isPortrait {
@@ -137,14 +145,45 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     // MARK: - Private func
     
-    // le style par défaut :
-    private func setDefaultStyle() {
-        layoutStackView.setStyle(.layout1)
-        layoutOptions?.setLayoutStyle(style: .layout1)
-        
+    // fonction qui gère l'affichage des boutons de sélection du style de grille
+    // choisi, selon l'état des boutons de sélection :
+    private func setLayoutButtonsStyle(style: Style) {
+        switch style {
+        case .layout1:
+            layoutOneButton.isSelected = true
+            layoutTwoButton.isSelected = false
+            layoutThreeButton.isSelected = false
+        case .layout2:
+            layoutOneButton.isSelected = false
+            layoutTwoButton.isSelected = true
+            layoutThreeButton.isSelected = false
+        case .layout3:
+            layoutOneButton.isSelected = false
+            layoutTwoButton.isSelected = false
+            layoutThreeButton.isSelected = true
+        }
     }
     
-    // fonction qui s'execute au changement d'orientation :
+    // fonction qui gère l'affichage de la grille centrale :
+    private func setGridStyle(_ style: Style) {
+         switch style {
+         case .layout1:
+             layoutOneGrid.isHidden = false
+             layoutTwoGrid.isHidden = true
+             layoutThreeGrid.isHidden = true
+         case .layout2:
+             layoutOneGrid.isHidden = true
+             layoutTwoGrid.isHidden = false
+             layoutThreeGrid.isHidden = true
+         case .layout3:
+             layoutOneGrid.isHidden = true
+             layoutTwoGrid.isHidden = true
+             layoutThreeGrid.isHidden = false
+         }
+     }
+
+    
+    // fonction qui s'exécute au changement d'orientation :
     private func orientationChange() {
         if UIDevice.current.orientation.isLandscape {
             arrowImage.image = #imageLiteral(resourceName: "Arrow Left")
@@ -181,6 +220,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         self.present(activityController, animated: true)
     }
     
+    // Fonction qui détermine les actions à réaliser suivant l'état des autorisations d'accès :
     private func checkAuthorizationStatus() -> Bool {
         let readWriteStatus = PHPhotoLibrary.authorizationStatus()
         switch readWriteStatus {
@@ -223,7 +263,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     private func exportImage() -> UIImage {
         let renderer = UIGraphicsImageRenderer(size: layoutStackView.bounds.size)
         let image = renderer.image { ctx in
-            layoutStackView.drawHierarchy(in: layoutView.bounds, afterScreenUpdates: true)
+            layoutStackView.drawHierarchy(in: layoutStackView.bounds, afterScreenUpdates: true)
         }
         return image
     }

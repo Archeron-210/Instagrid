@@ -25,10 +25,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Instagrid " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fw7-Xd-hmk">
+                                <rect key="frame" x="121" y="40" width="133.5" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Y83-8G-S1Q"/>
+                                    <constraint firstAttribute="height" constant="34" id="qPE-Or-KfE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="30"/>
+                                <color key="textColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Y83-8G-S1Q"/>
+                                        <exclude reference="qPE-Or-KfE"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="Y83-8G-S1Q"/>
+                                        <include reference="qPE-Or-KfE"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJB-P7-g8c">
+                                <rect key="frame" x="113.5" y="151" width="148" height="27"/>
+                                <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="24"/>
+                                <color key="textColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="I06-DJ-9SV" userLabel="Layout Stack View">
                                 <rect key="frame" x="40" y="186" width="295" height="295"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FNI-Fc-XGb" userLabel="Layout1">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FNI-Fc-XGb" userLabel="Layout One Grid">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="295"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="plH-lg-tRb" userLabel="RectangleImage">
@@ -132,7 +161,7 @@
                                             <constraint firstAttribute="bottom" secondItem="Q9s-wl-jYc" secondAttribute="bottom" constant="15" id="wlZ-wr-HYC"/>
                                         </constraints>
                                     </view>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1u-mX-0dZ" userLabel="Layout2">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J1u-mX-0dZ" userLabel="Layout Two Grid">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="295"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQh-z5-kMr" userLabel="RectangleImage">
@@ -236,7 +265,7 @@
                                             <constraint firstItem="bsG-sw-9cf" firstAttribute="leading" secondItem="J1u-mX-0dZ" secondAttribute="leading" constant="15" id="zLc-go-4rU"/>
                                         </constraints>
                                     </view>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FLP-Vn-I2c" userLabel="Layout3">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FLP-Vn-I2c" userLabel="Layout Three Grid">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="295"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="75k-DO-0zA" userLabel="SquareImageTopLeft">
@@ -380,104 +409,42 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="rWs-gf-e7n" userLabel="Layout Options Stack View">
                                 <rect key="frame" x="50" y="554" width="275" height="73"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i6H-IA-ao6" userLabel="Layout1">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ww-1v-ni7">
                                         <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ww-1v-ni7">
-                                                <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
-                                                <state key="normal" backgroundImage="Layout 1"/>
-                                            </button>
-                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="vvs-XF-22S" userLabel="Layout One Selected">
-                                                <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="vvs-XF-22S" secondAttribute="bottom" id="4Yt-cC-k0x"/>
-                                            <constraint firstItem="vvs-XF-22S" firstAttribute="leading" secondItem="i6H-IA-ao6" secondAttribute="leading" id="HSg-wv-Ylo"/>
-                                            <constraint firstAttribute="trailing" secondItem="6ww-1v-ni7" secondAttribute="trailing" id="Pug-wS-wUk"/>
-                                            <constraint firstItem="6ww-1v-ni7" firstAttribute="leading" secondItem="i6H-IA-ao6" secondAttribute="leading" id="eMR-eN-keh"/>
-                                            <constraint firstItem="vvs-XF-22S" firstAttribute="top" secondItem="i6H-IA-ao6" secondAttribute="top" id="eXP-vX-HMZ"/>
-                                            <constraint firstAttribute="trailing" secondItem="vvs-XF-22S" secondAttribute="trailing" id="fvb-xl-zuS"/>
-                                            <constraint firstAttribute="width" secondItem="i6H-IA-ao6" secondAttribute="height" multiplier="1:1" id="i1X-lt-zbt"/>
-                                            <constraint firstItem="6ww-1v-ni7" firstAttribute="top" secondItem="i6H-IA-ao6" secondAttribute="top" id="lFx-SZ-jfx"/>
-                                            <constraint firstAttribute="bottom" secondItem="6ww-1v-ni7" secondAttribute="bottom" id="qZC-4u-QdA"/>
+                                            <constraint firstAttribute="width" secondItem="6ww-1v-ni7" secondAttribute="height" multiplier="1:1" id="kHU-Ia-aD3"/>
                                         </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CxR-ci-7nd" userLabel="Layout2">
+                                        <state key="normal" backgroundImage="Layout 1"/>
+                                        <state key="selected" image="Selected" backgroundImage="Layout 1"/>
+                                        <connections>
+                                            <action selector="selectLayout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="idi-RJ-eKN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ck8-xK-S9j">
                                         <rect key="frame" x="101" y="0.0" width="73" height="73"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ck8-xK-S9j">
-                                                <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
-                                                <state key="normal" backgroundImage="Layout 2"/>
-                                            </button>
-                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="eIU-tL-3aj" userLabel="Layout Two Selected">
-                                                <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="eIU-tL-3aj" secondAttribute="trailing" id="0GD-nm-UHE"/>
-                                            <constraint firstAttribute="bottom" secondItem="eIU-tL-3aj" secondAttribute="bottom" id="1bp-s5-4b2"/>
-                                            <constraint firstAttribute="bottom" secondItem="ck8-xK-S9j" secondAttribute="bottom" id="UUn-pd-Yj4"/>
-                                            <constraint firstAttribute="width" secondItem="CxR-ci-7nd" secondAttribute="height" multiplier="1:1" id="YTe-e6-dOo"/>
-                                            <constraint firstAttribute="trailing" secondItem="ck8-xK-S9j" secondAttribute="trailing" id="Z5S-4B-Drr"/>
-                                            <constraint firstItem="eIU-tL-3aj" firstAttribute="top" secondItem="CxR-ci-7nd" secondAttribute="top" id="bci-L7-qUd"/>
-                                            <constraint firstItem="eIU-tL-3aj" firstAttribute="leading" secondItem="CxR-ci-7nd" secondAttribute="leading" id="iZF-om-khc"/>
-                                            <constraint firstItem="ck8-xK-S9j" firstAttribute="top" secondItem="CxR-ci-7nd" secondAttribute="top" id="nZQ-w5-aNB"/>
-                                            <constraint firstItem="ck8-xK-S9j" firstAttribute="leading" secondItem="CxR-ci-7nd" secondAttribute="leading" id="sXL-NY-nS3"/>
+                                            <constraint firstAttribute="width" secondItem="ck8-xK-S9j" secondAttribute="height" multiplier="1:1" id="rRp-gE-QiA"/>
                                         </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcV-T1-HqR" userLabel="Layout3">
+                                        <state key="normal" backgroundImage="Layout 2"/>
+                                        <state key="selected" image="Selected" backgroundImage="Layout 2"/>
+                                        <connections>
+                                            <action selector="selectLayout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zse-mG-eSY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ri-Lf-lDL">
                                         <rect key="frame" x="202" y="0.0" width="73" height="73"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ri-Lf-lDL">
-                                                <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
-                                                <state key="normal" backgroundImage="Layout 3"/>
-                                            </button>
-                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="OLa-L4-Rj0" userLabel="Layout 3 Selected">
-                                                <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
-                                            </imageView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="7ri-Lf-lDL" firstAttribute="leading" secondItem="vcV-T1-HqR" secondAttribute="leading" id="29w-g8-hcZ"/>
-                                            <constraint firstItem="OLa-L4-Rj0" firstAttribute="top" secondItem="vcV-T1-HqR" secondAttribute="top" id="C7b-xA-xJI"/>
-                                            <constraint firstAttribute="trailing" secondItem="7ri-Lf-lDL" secondAttribute="trailing" id="CDd-xj-uQD"/>
-                                            <constraint firstAttribute="bottom" secondItem="OLa-L4-Rj0" secondAttribute="bottom" id="TSp-za-WaM"/>
-                                            <constraint firstAttribute="width" secondItem="vcV-T1-HqR" secondAttribute="height" multiplier="1:1" id="o9j-OW-Sjs"/>
-                                            <constraint firstAttribute="trailing" secondItem="OLa-L4-Rj0" secondAttribute="trailing" id="oq4-jA-Emk"/>
-                                            <constraint firstItem="OLa-L4-Rj0" firstAttribute="leading" secondItem="vcV-T1-HqR" secondAttribute="leading" id="tKD-UX-Aj4"/>
-                                            <constraint firstItem="7ri-Lf-lDL" firstAttribute="top" secondItem="vcV-T1-HqR" secondAttribute="top" id="uY1-ML-zo2"/>
-                                            <constraint firstAttribute="bottom" secondItem="7ri-Lf-lDL" secondAttribute="bottom" id="vdB-UJ-XZy"/>
+                                            <constraint firstAttribute="width" secondItem="7ri-Lf-lDL" secondAttribute="height" multiplier="1:1" id="ICe-ZD-yLj"/>
                                         </constraints>
-                                    </view>
+                                        <state key="normal" backgroundImage="Layout 3"/>
+                                        <state key="selected" image="Selected" backgroundImage="Layout 3"/>
+                                        <connections>
+                                            <action selector="selectLayout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Yy-Pk-PFn"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <variation key="heightClass=regular-widthClass=compact" axis="horizontal"/>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Instagrid " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fw7-Xd-hmk">
-                                <rect key="frame" x="121" y="40" width="133.5" height="39"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="Y83-8G-S1Q"/>
-                                    <constraint firstAttribute="height" constant="34" id="qPE-Or-KfE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="30"/>
-                                <color key="textColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="Y83-8G-S1Q"/>
-                                        <exclude reference="qPE-Or-KfE"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact">
-                                    <mask key="constraints">
-                                        <exclude reference="Y83-8G-S1Q"/>
-                                        <include reference="qPE-Or-KfE"/>
-                                    </mask>
-                                </variation>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="1gN-d5-THy">
                                 <rect key="frame" x="180" y="128" width="15" height="15"/>
                                 <constraints>
@@ -485,12 +452,6 @@
                                     <constraint firstAttribute="width" constant="15" id="wJi-Gb-wa6"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJB-P7-g8c">
-                                <rect key="frame" x="113.5" y="151" width="148" height="27"/>
-                                <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="24"/>
-                                <color key="textColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.71982049940000004" green="0.84202820060000005" blue="0.89804977180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -560,21 +521,22 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="LayoutOneGrid" destination="FNI-Fc-XGb" id="q5O-9u-c8N"/>
                         <outlet property="arrowImage" destination="1gN-d5-THy" id="Qs6-oI-iDv"/>
                         <outlet property="layoutOneButton" destination="6ww-1v-ni7" id="W3N-hI-XP4"/>
-                        <outlet property="layoutOneSelected" destination="vvs-XF-22S" id="NBZ-fk-vE3"/>
+                        <outlet property="layoutOneGrid" destination="FNI-Fc-XGb" id="RYw-d2-fe1"/>
                         <outlet property="layoutStackView" destination="I06-DJ-9SV" id="os1-0N-jXy"/>
                         <outlet property="layoutThreeButton" destination="7ri-Lf-lDL" id="ZM9-Ui-MhQ"/>
-                        <outlet property="layoutThreeSelected" destination="OLa-L4-Rj0" id="Bdz-pP-ywx"/>
+                        <outlet property="layoutThreeGrid" destination="FLP-Vn-I2c" id="NPT-8Z-WbF"/>
                         <outlet property="layoutTwoButton" destination="ck8-xK-S9j" id="Sha-dY-HZc"/>
-                        <outlet property="layoutTwoSelected" destination="eIU-tL-3aj" id="tyJ-8E-l9r"/>
+                        <outlet property="layoutTwoGrid" destination="J1u-mX-0dZ" id="yeT-9l-aPe"/>
                         <outlet property="swipeLabel" destination="eJB-P7-g8c" id="yEA-T4-o5n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="CQW-R6-COz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1004" y="-2402"/>
+            <point key="canvasLocation" x="-983" y="-2483"/>
         </scene>
     </scenes>
     <resources>
