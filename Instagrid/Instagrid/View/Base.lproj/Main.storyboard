@@ -48,6 +48,13 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="1gN-d5-THy">
+                                <rect key="frame" x="180" y="128" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1gN-d5-THy" secondAttribute="height" multiplier="1:1" id="ku5-G3-zAa"/>
+                                    <constraint firstAttribute="width" constant="15" id="wJi-Gb-wa6"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJB-P7-g8c">
                                 <rect key="frame" x="113.5" y="151" width="148" height="27"/>
                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="24"/>
@@ -445,13 +452,6 @@
                                 </subviews>
                                 <variation key="heightClass=regular-widthClass=compact" axis="horizontal"/>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="1gN-d5-THy">
-                                <rect key="frame" x="180" y="128" width="15" height="15"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="1gN-d5-THy" secondAttribute="height" multiplier="1:1" id="ku5-G3-zAa"/>
-                                    <constraint firstAttribute="width" constant="15" id="wJi-Gb-wa6"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.71982049940000004" green="0.84202820060000005" blue="0.89804977180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -486,13 +486,13 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="qHp-dc-K3R"/>
-                                <exclude reference="pXb-4j-lxI"/>
-                                <exclude reference="pru-ec-Z5F"/>
                                 <exclude reference="GIG-fC-m78"/>
                                 <exclude reference="P8Q-Ph-nJW"/>
                                 <exclude reference="v8D-sF-iNf"/>
                                 <exclude reference="ceL-VZ-LpD"/>
                                 <exclude reference="dsD-Wr-K8I"/>
+                                <exclude reference="pXb-4j-lxI"/>
+                                <exclude reference="pru-ec-Z5F"/>
                                 <exclude reference="Xl9-VV-47j"/>
                                 <exclude reference="cNZ-xa-GhC"/>
                             </mask>
@@ -502,9 +502,6 @@
                                 <exclude reference="WGq-2y-eT7"/>
                                 <exclude reference="X9C-Ms-Dkf"/>
                                 <include reference="qHp-dc-K3R"/>
-                                <exclude reference="Qg5-hX-fPE"/>
-                                <exclude reference="pXb-4j-lxI"/>
-                                <exclude reference="pru-ec-Z5F"/>
                                 <include reference="GIG-fC-m78"/>
                                 <include reference="P8Q-Ph-nJW"/>
                                 <exclude reference="R6L-aV-7q0"/>
@@ -514,6 +511,9 @@
                                 <include reference="ceL-VZ-LpD"/>
                                 <include reference="dsD-Wr-K8I"/>
                                 <exclude reference="fkg-mJ-S3E"/>
+                                <exclude reference="Qg5-hX-fPE"/>
+                                <exclude reference="pXb-4j-lxI"/>
+                                <exclude reference="pru-ec-Z5F"/>
                                 <include reference="Xl9-VV-47j"/>
                                 <exclude reference="bWP-9w-SBF"/>
                                 <include reference="cNZ-xa-GhC"/>
@@ -536,7 +536,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="CQW-R6-COz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-983" y="-2483"/>
+            <point key="canvasLocation" x="-1150" y="-2481"/>
         </scene>
     </scenes>
     <resources>
