@@ -19,6 +19,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var layoutOneButton: UIButton!
     @IBOutlet weak var layoutTwoButton: UIButton!
     @IBOutlet weak var layoutThreeButton: UIButton!
+    @IBOutlet var buttons: [UIButton]!
     
     // on créé une variable selectedButton qui est un UIButton et qui représente
     // le bouton sur lequel on a appuyé :
@@ -39,6 +40,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         orientationChange()
         style = .layout1
+        setDefaultButtonImages()
         // on créé le geste Swipe Up en précisant la target, et l'action à réaliser,
         // puis la direction du swipe, et on ajoute le geste :
         let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(swipeUp(_:)))
@@ -276,6 +278,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     private func reverseTranslation() {
         UIView.animate(withDuration: 0.5) {
             self.layoutStackView.transform = .identity
+        }
+    }
+    
+    private func setDefaultButtonImages() {
+        for button in buttons {
+            button.imageView?.contentMode = .scaleAspectFill
+            let image = #imageLiteral(resourceName: "Plus")
+            button.setImage(image, for: .normal)
         }
     }
 }
