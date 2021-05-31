@@ -211,6 +211,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // ce que l'on souhaite partager, et les supports de partages désirés,
         // ici à nil pour obtenir les options automatiques qui peuvent partager des images :
         let activityController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+        // tentative de correction de l'erreur qui apparait à la fermeture
+        // de la Share Sheet :
         if #available(iOS 13.0, *) {
             activityController.isModalInPresentation = true
         } else {
