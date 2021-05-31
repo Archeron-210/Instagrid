@@ -40,7 +40,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         orientationChange()
         style = .layout1
-        setDefaultButtonImages()
+        setDefaultButtonStyle()
         // on créé le geste Swipe Up en précisant la target, et l'action à réaliser,
         // puis la direction du swipe, et on ajoute le geste :
         let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(swipeUp(_:)))
@@ -281,7 +281,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
-    private func setDefaultButtonImages() {
+    // fonction qui permet d'afficher le Plus sur les boutons :
+    private func setDefaultButtonStyle() {
         for button in buttons {
             button.imageView?.contentMode = .scaleAspectFill
             let image = #imageLiteral(resourceName: "Plus")
