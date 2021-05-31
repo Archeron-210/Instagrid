@@ -14,7 +14,6 @@
 		20B5F857263FEA8B00B3DA3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20B5F855263FEA8B00B3DA3D /* LaunchScreen.storyboard */; };
 		20B5F860263FF2ED00B3DA3D /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 20B5F85F263FF2ED00B3DA3D /* Delm-Medium.otf */; };
 		20B5F863263FF2F800B3DA3D /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 20B5F862263FF2F800B3DA3D /* ThirstySoftRegular.otf */; };
-		20C7A4E02655505D0098E712 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C7A4DF2655505D0098E712 /* Style.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		20B5F858263FEA8B00B3DA3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20B5F85F263FF2ED00B3DA3D /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
 		20B5F862263FF2F800B3DA3D /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
-		20C7A4DF2655505D0098E712 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Style.swift; path = Instagrid/View/Style.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +69,6 @@
 		20B5F866263FFC3800B3DA3D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				20C7A4DF2655505D0098E712 /* Style.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -179,7 +176,6 @@
 			files = (
 				20B5F84F263FEA8800B3DA3D /* ViewController.swift in Sources */,
 				20B5F84B263FEA8800B3DA3D /* AppDelegate.swift in Sources */,
-				20C7A4E02655505D0098E712 /* Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

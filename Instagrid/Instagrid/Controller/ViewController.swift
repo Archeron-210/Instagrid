@@ -4,6 +4,10 @@ import Photos
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    enum Style {
+        case layout1, layout2, layout3
+    }
+    
     // MARK: - Outlets
     
     @IBOutlet weak var arrowImage: UIImageView!
@@ -211,13 +215,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // ce que l'on souhaite partager, et les supports de partages désirés,
         // ici à nil pour obtenir les options automatiques qui peuvent partager des images :
         let activityController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
-        // tentative de correction de l'erreur qui apparait à la fermeture
-        // de la Share Sheet :
-        if #available(iOS 13.0, *) {
-            activityController.isModalInPresentation = true
-        } else {
-            // Fallback on earlier versions
-        }
         // on précise ensuite dans une closure l'action à réaliser quand le partage a été effectué,
         // ici l'animation de retour :
         activityController.completionWithItemsHandler = { activity, completed, items, error in
