@@ -24,13 +24,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradientBackground" translatesAutoresizingMaskIntoConstraints="NO" id="gKL-4D-vNV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Instagrid " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fw7-Xd-hmk">
-                                <rect key="frame" x="121" y="40" width="133.5" height="39"/>
+                                <rect key="frame" x="98.5" y="40" width="178" height="50"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Uwy-Xs-exk"/>
                                     <constraint firstAttribute="height" constant="34" id="Y83-8G-S1Q"/>
-                                    <constraint firstAttribute="height" constant="34" id="qPE-Or-KfE"/>
+                                    <constraint firstAttribute="height" constant="34" id="qPE-Or-KfE">
+                                        <variation key="heightClass=compact" constant="35"/>
+                                    </constraint>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="40"/>
                                 <color key="textColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
@@ -41,7 +47,9 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact">
+                                    <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="30"/>
                                     <mask key="constraints">
+                                        <exclude reference="Uwy-Xs-exk"/>
                                         <exclude reference="Y83-8G-S1Q"/>
                                         <include reference="qPE-Or-KfE"/>
                                     </mask>
@@ -94,8 +102,8 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.08873555809" green="0.39517873529999997" blue="0.59610384699999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <color key="tintColor" red="0.08873555809" green="0.39517873529999997" blue="0.59610384699999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.71982049940000004" green="0.84202820060000005" blue="0.89804977180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" red="0.71982049940000004" green="0.84202820060000005" blue="0.89804977180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="FNI-Fc-XGb" secondAttribute="height" multiplier="1:1" id="0d7-MU-P26"/>
                                             <constraint firstItem="3AO-7N-wK0" firstAttribute="leading" secondItem="FNI-Fc-XGb" secondAttribute="leading" constant="15" id="6Ve-RJ-Is3"/>
@@ -143,8 +151,8 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.08873555809" green="0.39517873529999997" blue="0.59610384699999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <color key="tintColor" red="0.08873555809" green="0.39517873529999997" blue="0.59610384699999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.71982049940000004" green="0.84202820060000005" blue="0.89804977180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" red="0.71982049940000004" green="0.84202820060000005" blue="0.89804977180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="0NS-z2-bDj" secondAttribute="bottom" constant="15" id="3NX-wl-tjH"/>
                                             <constraint firstItem="0NS-z2-bDj" firstAttribute="leading" secondItem="J1u-mX-0dZ" secondAttribute="leading" constant="15" id="9m4-BH-kij"/>
@@ -203,8 +211,8 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.08873555809" green="0.39517873529999997" blue="0.59610384699999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <color key="tintColor" red="0.08873555809" green="0.39517873529999997" blue="0.59610384699999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.71982049940000004" green="0.84202820060000005" blue="0.89804977180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" red="0.71982049940000004" green="0.84202820060000005" blue="0.89804977180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="Wcz-RS-z9d" secondAttribute="bottom" constant="15" id="9oI-75-Kxq"/>
                                             <constraint firstItem="Kvc-WG-Xoy" firstAttribute="leading" secondItem="FLP-Vn-I2c" secondAttribute="leading" constant="15" id="Anp-Is-dPP"/>
@@ -273,6 +281,8 @@
                             <constraint firstItem="Fw7-Xd-hmk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="A7c-UZ-Lru">
                                 <variation key="heightClass=compact" constant="20"/>
                             </constraint>
+                            <constraint firstItem="gKL-4D-vNV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BfP-Q6-lYT"/>
+                            <constraint firstAttribute="trailing" secondItem="gKL-4D-vNV" secondAttribute="trailing" id="DR5-ES-jtS"/>
                             <constraint firstItem="I06-DJ-9SV" firstAttribute="top" secondItem="eJB-P7-g8c" secondAttribute="bottom" constant="8" id="E3S-5b-jX8"/>
                             <constraint firstItem="eJB-P7-g8c" firstAttribute="centerX" secondItem="1gN-d5-THy" secondAttribute="centerX" id="GIG-fC-m78"/>
                             <constraint firstItem="eJB-P7-g8c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="P8Q-Ph-nJW"/>
@@ -289,7 +299,9 @@
                             </constraint>
                             <constraint firstItem="I06-DJ-9SV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ceL-VZ-LpD"/>
                             <constraint firstItem="I06-DJ-9SV" firstAttribute="top" secondItem="Fw7-Xd-hmk" secondAttribute="bottom" constant="20" id="dsD-Wr-K8I"/>
+                            <constraint firstAttribute="bottom" secondItem="gKL-4D-vNV" secondAttribute="bottom" id="f4I-dE-APV"/>
                             <constraint firstItem="I06-DJ-9SV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="fkg-mJ-S3E"/>
+                            <constraint firstItem="gKL-4D-vNV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fqT-kF-uwF"/>
                             <constraint firstItem="Fw7-Xd-hmk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kDk-3T-nb6"/>
                             <constraint firstItem="1gN-d5-THy" firstAttribute="top" secondItem="Fw7-Xd-hmk" secondAttribute="bottom" constant="16" id="pXb-4j-lxI"/>
                             <constraint firstItem="1gN-d5-THy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="pru-ec-Z5F"/>
@@ -359,7 +371,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="CQW-R6-COz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-374" y="-2598"/>
+            <point key="canvasLocation" x="-370" y="-2948"/>
         </scene>
     </scenes>
     <resources>
@@ -368,5 +380,6 @@
         <image name="Layout 2" width="27" height="27"/>
         <image name="Layout 3" width="27" height="27"/>
         <image name="Selected" width="27" height="27"/>
+        <image name="gradientBackground" width="100" height="200"/>
     </resources>
 </document>

@@ -58,19 +58,11 @@
 		20B5F849263FEA8800B3DA3D /* Instagrid */ = {
 			isa = PBXGroup;
 			children = (
-				20B5F866263FFC3800B3DA3D /* Model */,
 				20B5F867263FFC4700B3DA3D /* View */,
 				20B5F868263FFC5700B3DA3D /* Controller */,
 				20B5F869263FFCA200B3DA3D /* Supporting Files */,
 			);
 			path = Instagrid;
-			sourceTree = "<group>";
-		};
-		20B5F866263FFC3800B3DA3D /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		20B5F867263FFC4700B3DA3D /* View */ = {
