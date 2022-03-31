@@ -3,10 +3,7 @@ import UIKit
 import Photos
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    enum Style {
-        case layout1, layout2, layout3
-    }
+
     
     // MARK: - Outlets
     
@@ -20,6 +17,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var layoutTwoButton: UIButton!
     @IBOutlet weak var layoutThreeButton: UIButton!
     @IBOutlet var buttons: [UIButton]!
+
+    // MARK: - Properties
     
     // on créé une variable selectedButton qui est un UIButton et qui représente
     // le bouton sur lequel on a appuyé :
@@ -149,7 +148,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     
-    // MARK: - Private func
+    // MARK: - Private
     
     // fonction qui gère l'affichage des boutons de sélection du style de grille
     // choisi, selon l'état des boutons de sélection :
