@@ -28,7 +28,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Instagrid " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fw7-Xd-hmk">
-                                <rect key="frame" x="98.5" y="40" width="178" height="50"/>
+                                <rect key="frame" x="98" y="40" width="179" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Uwy-Xs-exk"/>
                                     <constraint firstAttribute="height" constant="34" id="Y83-8G-S1Q"/>
@@ -39,7 +39,8 @@
                                 <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="40"/>
                                 <color key="textColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                <color key="shadowColor" red="0.76078951360000002" green="0.76077514889999998" blue="0.76078486440000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <size key="shadowOffset" width="1" height="0.0"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Y83-8G-S1Q"/>
