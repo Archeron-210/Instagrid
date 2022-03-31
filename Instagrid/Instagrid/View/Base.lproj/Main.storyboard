@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -56,20 +57,20 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJB-P7-g8c">
+                                <rect key="frame" x="113.5" y="154" width="148" height="27"/>
+                                <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="24"/>
+                                <color key="textColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="1gN-d5-THy">
-                                <rect key="frame" x="180" y="128" width="15" height="15"/>
+                                <rect key="frame" x="180" y="131" width="15" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1gN-d5-THy" secondAttribute="height" multiplier="1:1" id="ku5-G3-zAa"/>
                                     <constraint firstAttribute="width" constant="15" id="wJi-Gb-wa6"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJB-P7-g8c">
-                                <rect key="frame" x="113.5" y="151" width="148" height="27"/>
-                                <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="24"/>
-                                <color key="textColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="I06-DJ-9SV" userLabel="Layout Stack View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="trI-Sk-zS2" userLabel="Layout View">
                                 <rect key="frame" x="40" y="186" width="295" height="295"/>
                                 <subviews>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FNI-Fc-XGb" userLabel="Layout One Grid">
@@ -231,10 +232,23 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="I06-DJ-9SV" secondAttribute="height" multiplier="1:1" id="1bC-aj-EZ6"/>
+                                    <constraint firstItem="FNI-Fc-XGb" firstAttribute="leading" secondItem="trI-Sk-zS2" secondAttribute="leading" id="1mQ-Ao-UKD"/>
+                                    <constraint firstItem="FLP-Vn-I2c" firstAttribute="leading" secondItem="trI-Sk-zS2" secondAttribute="leading" id="21o-Hf-9v9"/>
+                                    <constraint firstItem="FNI-Fc-XGb" firstAttribute="top" secondItem="trI-Sk-zS2" secondAttribute="top" id="B8f-9f-p2L"/>
+                                    <constraint firstAttribute="trailing" secondItem="FLP-Vn-I2c" secondAttribute="trailing" id="Fvm-8j-mrr"/>
+                                    <constraint firstAttribute="width" secondItem="trI-Sk-zS2" secondAttribute="height" multiplier="1:1" id="Rrt-0X-qhC"/>
+                                    <constraint firstAttribute="bottom" secondItem="FLP-Vn-I2c" secondAttribute="bottom" id="VEA-V1-Kh1"/>
+                                    <constraint firstItem="J1u-mX-0dZ" firstAttribute="leading" secondItem="trI-Sk-zS2" secondAttribute="leading" id="VuI-4C-hUz"/>
+                                    <constraint firstItem="J1u-mX-0dZ" firstAttribute="top" secondItem="trI-Sk-zS2" secondAttribute="top" id="Zyt-fz-hCV"/>
+                                    <constraint firstAttribute="bottom" secondItem="FNI-Fc-XGb" secondAttribute="bottom" id="aiw-v9-Zah"/>
+                                    <constraint firstAttribute="trailing" secondItem="J1u-mX-0dZ" secondAttribute="trailing" id="hbX-m8-6z1"/>
+                                    <constraint firstItem="FLP-Vn-I2c" firstAttribute="top" secondItem="trI-Sk-zS2" secondAttribute="top" id="kNg-g5-ex3"/>
+                                    <constraint firstAttribute="trailing" secondItem="FNI-Fc-XGb" secondAttribute="trailing" id="oZ7-Wb-Jmy"/>
+                                    <constraint firstAttribute="bottom" secondItem="J1u-mX-0dZ" secondAttribute="bottom" id="yYM-Mc-bdr"/>
                                 </constraints>
-                            </stackView>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="rWs-gf-e7n" userLabel="Layout Options Stack View">
                                 <rect key="frame" x="50" y="554" width="275" height="73"/>
                                 <subviews>
@@ -284,65 +298,46 @@
                             </constraint>
                             <constraint firstItem="gKL-4D-vNV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BfP-Q6-lYT"/>
                             <constraint firstAttribute="trailing" secondItem="gKL-4D-vNV" secondAttribute="trailing" id="DR5-ES-jtS"/>
-                            <constraint firstItem="I06-DJ-9SV" firstAttribute="top" secondItem="eJB-P7-g8c" secondAttribute="bottom" constant="8" id="E3S-5b-jX8"/>
                             <constraint firstItem="eJB-P7-g8c" firstAttribute="centerX" secondItem="1gN-d5-THy" secondAttribute="centerX" id="GIG-fC-m78"/>
                             <constraint firstItem="eJB-P7-g8c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="P8Q-Ph-nJW"/>
                             <constraint firstItem="1gN-d5-THy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qg5-hX-fPE"/>
                             <constraint firstItem="eJB-P7-g8c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R6L-aV-7q0"/>
-                            <constraint firstItem="I06-DJ-9SV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TA9-On-onH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I06-DJ-9SV" secondAttribute="trailing" constant="40" id="WGq-2y-eT7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rWs-gf-e7n" secondAttribute="bottom" constant="40" id="X9C-Ms-Dkf"/>
-                            <constraint firstItem="rWs-gf-e7n" firstAttribute="top" secondItem="I06-DJ-9SV" secondAttribute="top" id="Xl9-VV-47j"/>
                             <constraint firstItem="rWs-gf-e7n" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="bWP-9w-SBF"/>
-                            <constraint firstItem="rWs-gf-e7n" firstAttribute="bottom" secondItem="I06-DJ-9SV" secondAttribute="bottom" id="cNZ-xa-GhC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rWs-gf-e7n" secondAttribute="trailing" constant="50" id="cYy-g1-KTa">
                                 <variation key="heightClass=compact" constant="40"/>
                             </constraint>
-                            <constraint firstItem="I06-DJ-9SV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ceL-VZ-LpD"/>
-                            <constraint firstItem="I06-DJ-9SV" firstAttribute="top" secondItem="Fw7-Xd-hmk" secondAttribute="bottom" constant="20" id="dsD-Wr-K8I"/>
                             <constraint firstAttribute="bottom" secondItem="gKL-4D-vNV" secondAttribute="bottom" id="f4I-dE-APV"/>
-                            <constraint firstItem="I06-DJ-9SV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="fkg-mJ-S3E"/>
                             <constraint firstItem="gKL-4D-vNV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fqT-kF-uwF"/>
+                            <constraint firstItem="trI-Sk-zS2" firstAttribute="top" secondItem="eJB-P7-g8c" secondAttribute="bottom" constant="5" id="jfr-YO-5ei"/>
                             <constraint firstItem="Fw7-Xd-hmk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kDk-3T-nb6"/>
+                            <constraint firstItem="trI-Sk-zS2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="niI-Pz-sbV"/>
+                            <constraint firstItem="trI-Sk-zS2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="oac-Rz-3kW"/>
                             <constraint firstItem="1gN-d5-THy" firstAttribute="top" secondItem="Fw7-Xd-hmk" secondAttribute="bottom" constant="16" id="pXb-4j-lxI"/>
                             <constraint firstItem="1gN-d5-THy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="pru-ec-Z5F"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="I06-DJ-9SV" secondAttribute="bottom" constant="20" id="qHp-dc-K3R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="trI-Sk-zS2" secondAttribute="trailing" constant="40" id="uCJ-NQ-kMd"/>
                             <constraint firstItem="eJB-P7-g8c" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="v8D-sF-iNf"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="qHp-dc-K3R"/>
                                 <exclude reference="GIG-fC-m78"/>
                                 <exclude reference="P8Q-Ph-nJW"/>
                                 <exclude reference="v8D-sF-iNf"/>
-                                <exclude reference="ceL-VZ-LpD"/>
-                                <exclude reference="dsD-Wr-K8I"/>
                                 <exclude reference="pXb-4j-lxI"/>
                                 <exclude reference="pru-ec-Z5F"/>
-                                <exclude reference="Xl9-VV-47j"/>
-                                <exclude reference="cNZ-xa-GhC"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
-                                <exclude reference="WGq-2y-eT7"/>
                                 <exclude reference="X9C-Ms-Dkf"/>
-                                <include reference="qHp-dc-K3R"/>
                                 <include reference="GIG-fC-m78"/>
                                 <include reference="P8Q-Ph-nJW"/>
                                 <exclude reference="R6L-aV-7q0"/>
                                 <include reference="v8D-sF-iNf"/>
-                                <exclude reference="E3S-5b-jX8"/>
-                                <exclude reference="TA9-On-onH"/>
-                                <include reference="ceL-VZ-LpD"/>
-                                <include reference="dsD-Wr-K8I"/>
-                                <exclude reference="fkg-mJ-S3E"/>
                                 <exclude reference="Qg5-hX-fPE"/>
                                 <exclude reference="pXb-4j-lxI"/>
                                 <exclude reference="pru-ec-Z5F"/>
-                                <include reference="Xl9-VV-47j"/>
                                 <exclude reference="bWP-9w-SBF"/>
-                                <include reference="cNZ-xa-GhC"/>
                             </mask>
                         </variation>
                     </view>
@@ -351,22 +346,21 @@
                         <outlet property="arrowImage" destination="1gN-d5-THy" id="Qs6-oI-iDv"/>
                         <outlet property="layoutOneButton" destination="6ww-1v-ni7" id="W3N-hI-XP4"/>
                         <outlet property="layoutOneGrid" destination="FNI-Fc-XGb" id="RYw-d2-fe1"/>
-                        <outlet property="layoutStackView" destination="I06-DJ-9SV" id="os1-0N-jXy"/>
                         <outlet property="layoutThreeButton" destination="7ri-Lf-lDL" id="ZM9-Ui-MhQ"/>
                         <outlet property="layoutThreeGrid" destination="FLP-Vn-I2c" id="NPT-8Z-WbF"/>
                         <outlet property="layoutTwoButton" destination="ck8-xK-S9j" id="Sha-dY-HZc"/>
                         <outlet property="layoutTwoGrid" destination="J1u-mX-0dZ" id="yeT-9l-aPe"/>
                         <outlet property="swipeLabel" destination="eJB-P7-g8c" id="yEA-T4-o5n"/>
-                        <outletCollection property="buttons" destination="mYk-Je-c3V" collectionClass="NSMutableArray" id="W50-ok-zIa"/>
-                        <outletCollection property="buttons" destination="3AO-7N-wK0" collectionClass="NSMutableArray" id="YSU-dc-5iP"/>
                         <outletCollection property="buttons" destination="1uF-nJ-f4D" collectionClass="NSMutableArray" id="YVX-Cr-u3v"/>
-                        <outletCollection property="buttons" destination="0NS-z2-bDj" collectionClass="NSMutableArray" id="c4l-NN-0Ev"/>
+                        <outletCollection property="buttons" destination="3AO-7N-wK0" collectionClass="NSMutableArray" id="YSU-dc-5iP"/>
+                        <outletCollection property="buttons" destination="mYk-Je-c3V" collectionClass="NSMutableArray" id="W50-ok-zIa"/>
                         <outletCollection property="buttons" destination="kom-7n-sKN" collectionClass="NSMutableArray" id="Jxe-Dr-G3M"/>
                         <outletCollection property="buttons" destination="a2E-Wd-jpM" collectionClass="NSMutableArray" id="1PM-CZ-cJU"/>
+                        <outletCollection property="buttons" destination="0NS-z2-bDj" collectionClass="NSMutableArray" id="c4l-NN-0Ev"/>
                         <outletCollection property="buttons" destination="V0T-uj-r3P" collectionClass="NSMutableArray" id="H4j-WZ-KtF"/>
-                        <outletCollection property="buttons" destination="srt-Wp-7rE" collectionClass="NSMutableArray" id="Xbj-5Q-lnb"/>
-                        <outletCollection property="buttons" destination="Kvc-WG-Xoy" collectionClass="NSMutableArray" id="83v-eQ-SJ2"/>
                         <outletCollection property="buttons" destination="Wcz-RS-z9d" collectionClass="NSMutableArray" id="AuW-fh-elT"/>
+                        <outletCollection property="buttons" destination="Kvc-WG-Xoy" collectionClass="NSMutableArray" id="83v-eQ-SJ2"/>
+                        <outletCollection property="buttons" destination="srt-Wp-7rE" collectionClass="NSMutableArray" id="Xbj-5Q-lnb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -382,5 +376,8 @@
         <image name="Layout 3" width="27" height="27"/>
         <image name="Selected" width="27" height="27"/>
         <image name="gradientBackground" width="100" height="200"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
