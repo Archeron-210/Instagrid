@@ -255,39 +255,97 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="rWs-gf-e7n" userLabel="Options Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="73"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ww-1v-ni7">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yAu-tY-3gj" userLabel="Layout1">
                                                 <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ww-1v-ni7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="6ww-1v-ni7" secondAttribute="height" multiplier="1:1" id="kHU-Ia-aD3"/>
+                                                        </constraints>
+                                                        <state key="normal" backgroundImage="Layout 1"/>
+                                                        <state key="selected" image="Selected" backgroundImage="Layout 1"/>
+                                                        <connections>
+                                                            <action selector="selectLayout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="idi-RJ-eKN"/>
+                                                        </connections>
+                                                    </button>
+                                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="8FK-t9-5R1" userLabel="Layout1 selected">
+                                                        <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="6ww-1v-ni7" secondAttribute="height" multiplier="1:1" id="kHU-Ia-aD3"/>
+                                                    <constraint firstAttribute="trailing" secondItem="6ww-1v-ni7" secondAttribute="trailing" id="C2V-g2-Iij"/>
+                                                    <constraint firstAttribute="width" secondItem="yAu-tY-3gj" secondAttribute="height" multiplier="1:1" id="JKE-Ij-Urg"/>
+                                                    <constraint firstItem="6ww-1v-ni7" firstAttribute="leading" secondItem="yAu-tY-3gj" secondAttribute="leading" id="ST6-7Z-Srf"/>
+                                                    <constraint firstAttribute="bottom" secondItem="6ww-1v-ni7" secondAttribute="bottom" id="WgH-LS-7C8"/>
+                                                    <constraint firstAttribute="bottom" secondItem="8FK-t9-5R1" secondAttribute="bottom" id="YQH-3S-IR7"/>
+                                                    <constraint firstItem="8FK-t9-5R1" firstAttribute="top" secondItem="yAu-tY-3gj" secondAttribute="top" id="ZFz-pm-0ZP"/>
+                                                    <constraint firstItem="8FK-t9-5R1" firstAttribute="leading" secondItem="yAu-tY-3gj" secondAttribute="leading" id="qBt-jG-V06"/>
+                                                    <constraint firstAttribute="trailing" secondItem="8FK-t9-5R1" secondAttribute="trailing" id="ylc-t9-exq"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="Layout 1"/>
-                                                <state key="selected" image="Selected" backgroundImage="Layout 1"/>
-                                                <connections>
-                                                    <action selector="selectLayout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="idi-RJ-eKN"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ck8-xK-S9j">
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qw-W2-gQ7" userLabel="Layout2">
                                                 <rect key="frame" x="101" y="0.0" width="73" height="73"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ck8-xK-S9j">
+                                                        <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="ck8-xK-S9j" secondAttribute="height" multiplier="1:1" id="rRp-gE-QiA"/>
+                                                        </constraints>
+                                                        <state key="normal" backgroundImage="Layout 2"/>
+                                                        <state key="selected" image="Selected" backgroundImage="Layout 2"/>
+                                                        <connections>
+                                                            <action selector="selectLayout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zse-mG-eSY"/>
+                                                        </connections>
+                                                    </button>
+                                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="H8A-o5-L4x" userLabel="Layout2 selected">
+                                                        <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="ck8-xK-S9j" secondAttribute="height" multiplier="1:1" id="rRp-gE-QiA"/>
+                                                    <constraint firstItem="H8A-o5-L4x" firstAttribute="leading" secondItem="2qw-W2-gQ7" secondAttribute="leading" id="PKw-Sv-g7x"/>
+                                                    <constraint firstAttribute="width" secondItem="2qw-W2-gQ7" secondAttribute="height" multiplier="1:1" id="T6f-hn-A5F"/>
+                                                    <constraint firstAttribute="trailing" secondItem="H8A-o5-L4x" secondAttribute="trailing" id="UZ8-CY-Y7A"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ck8-xK-S9j" secondAttribute="bottom" id="XYw-oj-yV3"/>
+                                                    <constraint firstItem="ck8-xK-S9j" firstAttribute="leading" secondItem="2qw-W2-gQ7" secondAttribute="leading" id="Y8i-dh-hRB"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ck8-xK-S9j" secondAttribute="trailing" id="dSZ-5G-xVc"/>
+                                                    <constraint firstItem="ck8-xK-S9j" firstAttribute="top" secondItem="2qw-W2-gQ7" secondAttribute="top" id="fqd-ZX-fvc"/>
+                                                    <constraint firstAttribute="bottom" secondItem="H8A-o5-L4x" secondAttribute="bottom" id="jIz-gj-IHE"/>
+                                                    <constraint firstItem="H8A-o5-L4x" firstAttribute="top" secondItem="2qw-W2-gQ7" secondAttribute="top" id="wty-g8-Bgl"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="Layout 2"/>
-                                                <state key="selected" image="Selected" backgroundImage="Layout 2"/>
-                                                <connections>
-                                                    <action selector="selectLayout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zse-mG-eSY"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ri-Lf-lDL">
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lF2-aZ-6Ym" userLabel="Layout3">
                                                 <rect key="frame" x="202" y="0.0" width="73" height="73"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ri-Lf-lDL">
+                                                        <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="7ri-Lf-lDL" secondAttribute="height" multiplier="1:1" id="ICe-ZD-yLj"/>
+                                                        </constraints>
+                                                        <state key="normal" backgroundImage="Layout 3"/>
+                                                        <state key="selected" image="Selected" backgroundImage="Layout 3"/>
+                                                        <connections>
+                                                            <action selector="selectLayout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Yy-Pk-PFn"/>
+                                                        </connections>
+                                                    </button>
+                                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Selected" translatesAutoresizingMaskIntoConstraints="NO" id="FyW-o7-WUo" userLabel="Layout3 selected">
+                                                        <rect key="frame" x="0.0" y="0.0" width="73" height="73"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="7ri-Lf-lDL" secondAttribute="height" multiplier="1:1" id="ICe-ZD-yLj"/>
+                                                    <constraint firstAttribute="trailing" secondItem="FyW-o7-WUo" secondAttribute="trailing" id="1w8-7l-q5F"/>
+                                                    <constraint firstAttribute="width" secondItem="lF2-aZ-6Ym" secondAttribute="height" multiplier="1:1" id="3CQ-tN-Sf9"/>
+                                                    <constraint firstItem="FyW-o7-WUo" firstAttribute="leading" secondItem="lF2-aZ-6Ym" secondAttribute="leading" id="4ec-eh-h8b"/>
+                                                    <constraint firstAttribute="bottom" secondItem="FyW-o7-WUo" secondAttribute="bottom" id="Eno-Ty-hIF"/>
+                                                    <constraint firstAttribute="trailing" secondItem="7ri-Lf-lDL" secondAttribute="trailing" id="TLL-iA-acM"/>
+                                                    <constraint firstItem="7ri-Lf-lDL" firstAttribute="leading" secondItem="lF2-aZ-6Ym" secondAttribute="leading" id="j9d-JF-Le4"/>
+                                                    <constraint firstAttribute="bottom" secondItem="7ri-Lf-lDL" secondAttribute="bottom" id="pud-eu-GLm"/>
+                                                    <constraint firstItem="FyW-o7-WUo" firstAttribute="top" secondItem="lF2-aZ-6Ym" secondAttribute="top" id="tCM-wF-984"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="Layout 3"/>
-                                                <state key="selected" image="Selected" backgroundImage="Layout 3"/>
-                                                <connections>
-                                                    <action selector="selectLayout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Yy-Pk-PFn"/>
-                                                </connections>
-                                            </button>
+                                            </view>
                                         </subviews>
                                         <variation key="heightClass=regular-widthClass=compact" axis="horizontal"/>
                                     </stackView>
