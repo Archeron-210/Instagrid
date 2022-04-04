@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina5_9" orientation="landscape" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -13,17 +13,20 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="j26-t6-uKF">
-                                <rect key="frame" x="321.66666666666669" y="60" width="169" height="169"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradientBackground" translatesAutoresizingMaskIntoConstraints="NO" id="u8m-oh-6fk">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="j26-t6-uKF">
+                                <rect key="frame" x="80" y="184" width="215" height="215"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="j26-t6-uKF" secondAttribute="height" multiplier="1:1" id="NGu-It-152"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Instagrid" translatesAutoresizingMaskIntoConstraints="NO" id="GZo-Im-Ae2">
-                                <rect key="frame" x="321.66666666666669" y="239" width="169" height="55"/>
+                                <rect key="frame" x="80" y="409" width="215" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="7pm-i0-BJq"/>
                                 </constraints>
@@ -34,18 +37,22 @@
                         <constraints>
                             <constraint firstItem="GZo-Im-Ae2" firstAttribute="trailing" secondItem="j26-t6-uKF" secondAttribute="trailing" id="0hr-wc-18q"/>
                             <constraint firstItem="GZo-Im-Ae2" firstAttribute="leading" secondItem="j26-t6-uKF" secondAttribute="leading" id="3QO-XY-q3s"/>
+                            <constraint firstAttribute="trailing" secondItem="u8m-oh-6fk" secondAttribute="trailing" id="7mx-xI-Qdj"/>
                             <constraint firstItem="GZo-Im-Ae2" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="8j2-v1-LXa"/>
                             <constraint firstItem="j26-t6-uKF" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="9H7-Ob-jpA"/>
                             <constraint firstItem="j26-t6-uKF" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="B5d-br-yWF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j26-t6-uKF" secondAttribute="trailing" constant="100" id="F7b-rE-kE9">
                                 <variation key="heightClass=compact" constant="50"/>
                             </constraint>
+                            <constraint firstAttribute="bottom" secondItem="u8m-oh-6fk" secondAttribute="bottom" id="Fpe-0I-tfA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GZo-Im-Ae2" secondAttribute="bottom" constant="60" id="IFW-pj-sGf"/>
                             <constraint firstItem="j26-t6-uKF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="ZJP-nx-XUa">
                                 <variation key="heightClass=compact" constant="60"/>
                             </constraint>
                             <constraint firstItem="j26-t6-uKF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="ad6-4B-Sap"/>
+                            <constraint firstItem="u8m-oh-6fk" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="hGR-pJ-15d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j26-t6-uKF" secondAttribute="trailing" constant="60" id="hGe-Yo-Uzy"/>
+                            <constraint firstItem="u8m-oh-6fk" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="kCi-sq-9Ri"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j26-t6-uKF" secondAttribute="trailing" constant="50" id="lJL-ua-AUX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j26-t6-uKF" secondAttribute="trailing" constant="30" id="mue-uN-aBg"/>
                             <constraint firstItem="j26-t6-uKF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="ncc-U4-XAt"/>
@@ -91,7 +98,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icon" width="60" height="60"/>
         <image name="Instagrid" width="130.66667175292969" height="33.333332061767578"/>
+        <image name="Logo" width="360" height="360"/>
+        <image name="gradientBackground" width="100" height="200"/>
     </resources>
 </document>
