@@ -25,8 +25,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradientBackground" translatesAutoresizingMaskIntoConstraints="NO" id="FuW-C0-Tcc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Instagrid " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fw7-Xd-hmk">
-                                <rect key="frame" x="121" y="40" width="133.5" height="39"/>
+                                <rect key="frame" x="120.5" y="40" width="134.5" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="Y83-8G-S1Q"/>
                                     <constraint firstAttribute="height" constant="34" id="qPE-Or-KfE"/>
@@ -34,7 +37,8 @@
                                 <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="30"/>
                                 <color key="textColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="1"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Y83-8G-S1Q"/>
@@ -139,8 +143,8 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.08873555809" green="0.39517873529999997" blue="0.59610384699999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <color key="tintColor" red="0.08873555809" green="0.39517873529999997" blue="0.59610384699999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.31395682689999999" green="0.56524425749999996" blue="0.72159141299999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" red="0.31395682689999999" green="0.56524425749999996" blue="0.72159141299999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstItem="bsG-sw-9cf" firstAttribute="top" secondItem="J1u-mX-0dZ" secondAttribute="top" constant="15" id="07O-Ib-2ZH"/>
                                             <constraint firstAttribute="trailing" secondItem="kQh-z5-kMr" secondAttribute="trailing" constant="15" id="GF3-I7-YAD"/>
@@ -271,8 +275,8 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.08873555809" green="0.39517873529999997" blue="0.59610384699999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <color key="tintColor" red="0.08873555809" green="0.39517873529999997" blue="0.59610384699999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.31395682689999999" green="0.56524425749999996" blue="0.72159141299999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" red="0.31395682689999999" green="0.56524425749999996" blue="0.72159141299999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstItem="EDg-7u-e3L" firstAttribute="bottom" secondItem="75k-DO-0zA" secondAttribute="bottom" id="117-T6-RAE"/>
                                             <constraint firstItem="yli-ad-MgM" firstAttribute="leading" secondItem="FLP-Vn-I2c" secondAttribute="leading" constant="15" id="6X9-up-gHe"/>
@@ -378,8 +382,8 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.08873555809" green="0.39517873529999997" blue="0.59610384699999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <color key="tintColor" red="0.08873555809" green="0.39517873529999997" blue="0.59610384699999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.31395682689999999" green="0.56524425749999996" blue="0.72159141299999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="tintColor" red="0.31395682689999999" green="0.56524425749999996" blue="0.72159141299999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstItem="plH-lg-tRb" firstAttribute="leading" secondItem="FNI-Fc-XGb" secondAttribute="leading" constant="15" id="7sN-x4-1jH"/>
                                             <constraint firstItem="DaA-nA-Kfk" firstAttribute="leading" secondItem="Q9s-wl-jYc" secondAttribute="trailing" constant="15" id="BD3-Lk-7F2"/>
@@ -418,17 +422,19 @@
                                 </connections>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="1gN-d5-THy">
-                                <rect key="frame" x="180" y="128" width="15" height="15"/>
+                                <rect key="frame" x="180" y="127" width="15" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1gN-d5-THy" secondAttribute="height" multiplier="1:1" id="ku5-G3-zAa"/>
                                     <constraint firstAttribute="width" constant="15" id="wJi-Gb-wa6"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to share" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJB-P7-g8c">
-                                <rect key="frame" x="113.5" y="151" width="148" height="27"/>
+                                <rect key="frame" x="113.5" y="150" width="148" height="28"/>
                                 <fontDescription key="fontDescription" name="Delm-Medium" family="Delm" pointSize="24"/>
                                 <color key="textColor" red="1" green="0.99998801950000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bv2-6b-FAW" userLabel="Layout Options" customClass="LayoutOptionView" customModule="Instagrid" customModuleProvider="target">
                                 <rect key="frame" x="50" y="554" width="275" height="73"/>
@@ -551,7 +557,9 @@
                             <constraint firstItem="eJB-P7-g8c" firstAttribute="centerX" secondItem="1gN-d5-THy" secondAttribute="centerX" id="GIG-fC-m78"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bv2-6b-FAW" secondAttribute="trailing" constant="50" id="MWo-Iw-ALH"/>
                             <constraint firstItem="eJB-P7-g8c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="P8Q-Ph-nJW"/>
+                            <constraint firstAttribute="trailing" secondItem="FuW-C0-Tcc" secondAttribute="trailing" id="QRb-TR-MjC"/>
                             <constraint firstItem="1gN-d5-THy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qg5-hX-fPE"/>
+                            <constraint firstItem="FuW-C0-Tcc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="QwN-qf-ijK"/>
                             <constraint firstItem="Bv2-6b-FAW" firstAttribute="top" secondItem="ewG-GR-Mbq" secondAttribute="top" id="R4d-mZ-hjY"/>
                             <constraint firstItem="eJB-P7-g8c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="R6L-aV-7q0"/>
                             <constraint firstItem="ewG-GR-Mbq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Utu-NH-ybP"/>
@@ -562,11 +570,13 @@
                             <constraint firstItem="ewG-GR-Mbq" firstAttribute="top" secondItem="eJB-P7-g8c" secondAttribute="bottom" constant="8" id="dki-r8-UrH"/>
                             <constraint firstItem="Fw7-Xd-hmk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kDk-3T-nb6"/>
                             <constraint firstItem="ewG-GR-Mbq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="l28-1o-bU9"/>
+                            <constraint firstItem="FuW-C0-Tcc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="oeA-ii-JlG"/>
                             <constraint firstItem="1gN-d5-THy" firstAttribute="top" secondItem="Fw7-Xd-hmk" secondAttribute="bottom" constant="16" id="pXb-4j-lxI"/>
                             <constraint firstItem="1gN-d5-THy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="pru-ec-Z5F"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bv2-6b-FAW" secondAttribute="bottom" constant="40" id="qZF-3I-ldp"/>
                             <constraint firstItem="Bv2-6b-FAW" firstAttribute="bottom" secondItem="ewG-GR-Mbq" secondAttribute="bottom" id="uKN-Q0-w9x"/>
                             <constraint firstItem="eJB-P7-g8c" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="v8D-sF-iNf"/>
+                            <constraint firstAttribute="bottom" secondItem="FuW-C0-Tcc" secondAttribute="bottom" id="vk1-Zf-klp"/>
                             <constraint firstItem="Bv2-6b-FAW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="40" id="vzY-ev-gqP"/>
                         </constraints>
                         <variation key="default">
@@ -633,6 +643,7 @@
         <image name="Layout 3" width="27" height="27"/>
         <image name="Plus" width="13.5" height="13.5"/>
         <image name="Selected" width="27" height="27"/>
+        <image name="gradientBackground" width="100" height="200"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
