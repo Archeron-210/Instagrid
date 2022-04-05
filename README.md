@@ -1,6 +1,6 @@
 # Instagrid
 
-**Instagrid** is a picture collage iOS application, that allows user to create different layouts of collage with their pictures.
+**Instagrid** is a picture collage iOS application in MVC architecture, that allows user to create different layouts of collage with their pictures.
 
 <img src="Images/Launchscreen.png" width="50%" height="50%"/> 
 
