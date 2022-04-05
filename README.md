@@ -13,7 +13,7 @@ Available in portrait and landscape mode.
 <img src="Images/Landscape.png" width="30%" height="30%"/>
 
 
-## Functionnalities
+## Functionalities
 
 - [x] Choose from 3 different layouts
 
