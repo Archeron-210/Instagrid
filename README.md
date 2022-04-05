@@ -7,7 +7,7 @@
 ## Versions
 
 Current version : V2.
-Supports iOS 11. 
+Supports iOS 11+. 
 Available in portrait and landscape mode.
 
 <img src="Images/Landscape.png" width="30%" height="30%"/>
